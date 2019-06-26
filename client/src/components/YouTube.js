@@ -9,9 +9,9 @@ class YouTube extends React.Component {
 
 
  componentDidMount() {
-  axios.get("https://www.youtube.com/embed/bebuiaSKtU4?autoplay=1&origin=http://example.com")
+  axios.get("")
   .then( res => this.setState({ video: res.data, }) );
-  debugger
+ 
 }
   
 
@@ -24,8 +24,8 @@ class YouTube extends React.Component {
            type="text/html" 
            width="700" 
            height="400"
-           src="https://www.youtube.com/embed/bebuiaSKtU4?autoplay=1&origin=http://example.com"
-           frameborder="0">
+           src="https://www.youtube.com/embed?listType=playlist&list=PL50JhZpTWVPIbp_XsZ5mZKSbS19wYvOoD&autoplay=1&loop=1&modestbranding=1"
+           frameBorder="0">
            </iframe>
   
   )

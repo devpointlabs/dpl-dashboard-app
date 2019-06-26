@@ -4,11 +4,7 @@ import YouTube from './YouTube'
 
 
 const Home = () => (
-  <>
-  <Header as="h3" textAlign="center">
-    Devise Auth App
-  </Header>
-  
+  <> 
     <Grid celled>
         <Grid.Row>
           <Grid.Column width={4}>
