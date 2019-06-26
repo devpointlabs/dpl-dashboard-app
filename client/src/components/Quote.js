@@ -1,24 +1,21 @@
 import React from 'react'
+import axios from 'axios'
 
-class Quote extends React.Component{
-  constructor(){
+class Quote extends React.Component {
+  constructor() {
     super();
-    this.state = "";
-    
+    this.state = { quote: "", person: "" };
   }
-  
-  componentDidMount(){
-    
-    fetch ("https://quotes.rest/quote/random")
-    .then(res => {
-      this.setState
-      return res
-    }) 
+
+  componentDidMount() {
+    axios.get("/api/quotes")
+      .then(res =>
+        this.setState({ quote: res.quote, person: res.name }))
   }
-  
-  render(){
+
+  render() {
     return (
-      <div>{this.state}</div>
+      <div>"{this.state.quote}" -{this.state.person}</div>
     )
   }
 }
