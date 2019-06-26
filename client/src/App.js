@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Home from "./components/Home";
 import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
@@ -8,6 +8,7 @@ import { Switch, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 import FetchUser from "./components/FetchUser";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Weather from "./components/Weather";
 
 const App = () => (
   <div>
@@ -23,6 +24,7 @@ const App = () => (
         </Switch>
       </Container>
     </FetchUser>
+    <Weather />
   </div>
 );
 
