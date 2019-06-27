@@ -1,15 +1,21 @@
-import React from "react";
-import { Header, Grid, Image,  } from "semantic-ui-react";
+import React from "react"
+import Quote from './Quote'
+import Weather from './weather'
 import YouTube from './YouTube'
+import { Header, Grid,  } from "semantic-ui-react";
+
 
 
 const Home = () => (
+
+ 
+
   <> 
     <Grid celled>
         <Grid.Row>
           <Grid.Column width={4}>
           <Header>Quote of Day:</Header>
-          you can add your stuff here
+          <Quote />
           </Grid.Column>
           <Grid.Column width={8}>
              <Header>Todays Topic:</Header>
@@ -17,8 +23,7 @@ const Home = () => (
           </Grid.Column>
           <Grid.Column width={4}>
             <Header>Weather & Time</Header>
-            <Image src='https://picsum.photos/200' />
-            take out the silly image and add your stuff here
+           <Weather/>
           </Grid.Column>
         </Grid.Row>
 
@@ -39,6 +44,7 @@ const Home = () => (
          
          
  </>
+
 
 );
 

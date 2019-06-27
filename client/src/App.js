@@ -9,9 +9,12 @@ import { Switch, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 import FetchUser from "./components/FetchUser";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Weather from "./components/Weather";
 
 const App = () => (
+
   <>
+
     <Navbar />
     <FetchUser>
       <Container>
@@ -25,7 +28,9 @@ const App = () => (
         </Switch>
       </Container>
     </FetchUser>
+
   </>
+
 );
 
 export default App;
