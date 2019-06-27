@@ -9,8 +9,11 @@ import { Container, } from "semantic-ui-react";
     axios.get('http://api.openweathermap.org/data/2.5/weather?zip=84101,us&?units=imperial&APPID=562dea345b9be724579a871c814338dd')
      .then(res => {
        this.setState({ weather: [res.data] });
+       debugger
+       console.log(this.state)
      })
     .catch( err => {
+  
       console.log(err);
     })
   }

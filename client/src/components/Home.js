@@ -1,6 +1,6 @@
 import React from "react"
 import Quote from './Quote'
-import Weather from './weather'
+import Weather from './Weather'
 import YouTube from './YouTube'
 import { Header, Grid,  } from "semantic-ui-react";
 
