@@ -1,9 +1,8 @@
 import React from "react"
 import Quote from './Quote'
 import Weather from './weather'
-import { Header } from "semantic-ui-react";
-import { Header, Grid, Image,  } from "semantic-ui-react";
 import YouTube from './YouTube'
+import { Header, Grid,  } from "semantic-ui-react";
 
 
 
@@ -20,7 +19,7 @@ const Home = () => (
           </Grid.Column>
           <Grid.Column width={8}>
              <Header>Todays Topic:</Header>
-             
+             add your component here
           </Grid.Column>
           <Grid.Column width={4}>
             <Header>Weather & Time</Header>
@@ -31,6 +30,9 @@ const Home = () => (
        <Grid.Row>
           <Grid.Column width={5}>
           <Header>Upcoming Events:</Header>
+          <p>Events</p>
+          <p>Events</p>
+          <p>Events</p>
           </Grid.Column>
          <Grid.Column width={11}>
          <YouTube />
