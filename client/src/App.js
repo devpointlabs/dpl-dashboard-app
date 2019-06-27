@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
+import YTApp from "./components/youtube/YTApp"
 import Register from "./components/Register";
 import { Switch, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
@@ -11,21 +12,21 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Weather from "./components/Weather";
 
 const App = () => (
-  <div>
+  <>
     <Navbar />
     <FetchUser>
       <Container>
         <Switch>
           {/* <Route exact path="/" component={Home} /> */}
           <ProtectedRoute exact path="/" component={Home} />
+          <ProtectedRoute exact path="/youtube" component={YTApp} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route component={NoMatch} />
         </Switch>
       </Container>
     </FetchUser>
-    <Weather />
-  </div>
+  </>
 );
 
 export default App;
