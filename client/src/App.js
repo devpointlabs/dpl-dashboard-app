@@ -12,7 +12,9 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Weather from "./components/Weather";
 
 const App = () => (
+
   <>
+
     <Navbar />
     <FetchUser>
       <Container>
@@ -26,7 +28,9 @@ const App = () => (
         </Switch>
       </Container>
     </FetchUser>
+
   </>
+
 );
 
 export default App;
