@@ -3,7 +3,11 @@ import { Header, Grid, Image,  } from "semantic-ui-react";
 import YouTube from './YouTube'
 
 
+
 const Home = () => (
+
+ 
+
   <> 
     <Grid celled>
         <Grid.Row>
@@ -16,7 +20,7 @@ const Home = () => (
           </Grid.Column>
           <Grid.Column width={4}>
             <Header>Weather & Time</Header>
-            <Image src='https://picsum.photos/200' />
+           <Weather/>
           </Grid.Column>
         </Grid.Row>
 
