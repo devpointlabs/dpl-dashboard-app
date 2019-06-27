@@ -11,11 +11,7 @@ import FetchUser from "./components/FetchUser";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => (
-<<<<<<< HEAD
-  <Fragment>
-=======
   <>
->>>>>>> 73e3a502f8beed57341317d4cff79597b6bfd876
     <Navbar />
     <FetchUser>
       <Container>
@@ -29,11 +25,7 @@ const App = () => (
         </Switch>
       </Container>
     </FetchUser>
-<<<<<<< HEAD
-  </Fragment>
-=======
   </>
->>>>>>> 73e3a502f8beed57341317d4cff79597b6bfd876
 );
 
 export default App;

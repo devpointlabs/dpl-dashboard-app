@@ -1,40 +1,45 @@
 import React from "react";
-import { Header, Grid, Image,  } from "semantic-ui-react";
+import { Header, Grid, Image, } from "semantic-ui-react";
+import Quote from './Quote';
 import YouTube from './YouTube'
 
 
 const Home = () => (
-  <> 
+  <>
     <Grid celled>
-        <Grid.Row>
-          <Grid.Column width={4}>
-          <Header>Quote of Day:</Header>
-          </Grid.Column>
-          <Grid.Column width={8}>
-             <Header>Todays Topic:</Header>
-             
-          </Grid.Column>
-          <Grid.Column width={4}>
-            <Header>Weather & Time</Header>
-            <Image src='https://picsum.photos/200' />
-          </Grid.Column>
-        </Grid.Row>
+      <Grid.Row>
+        <Grid.Column width={4}>
+          <Header>Quote of Day:<Quote /></Header>
+        </Grid.Column>
+        <Grid.Column width={8}>
+          <Header>Todays Topic:</Header>
 
-       <Grid.Row>
-          <Grid.Column width={5}>
+        </Grid.Column>
+        <Grid.Column width={4}>
+          <Header>Weather & Time</Header>
+          <Image src='https://picsum.photos/200' />
+        </Grid.Column>
+      </Grid.Row>
+
+      <Grid.Row>
+        <Grid.Column width={5}>
           <Header>Upcoming Events:</Header>
-          </Grid.Column>
-         <Grid.Column width={11}>
-         <YouTube />
-         </Grid.Column>
-       </Grid.Row>
-     </Grid>
-          
-           
-         
-         
- </>
+        </Grid.Column>
+        <Grid.Column width={11}>
+          <YouTube />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+
+
+
+
+  </>
 
 );
 
+
+const style = () => {
+  
+}
 export default Home;
