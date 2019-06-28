@@ -8,9 +8,6 @@ import { Header, Grid,  } from "semantic-ui-react";
 
 
 const Home = () => (
-
- 
-
   <> 
     <Grid celled only="large screen" >
         <Grid.Row display="flex">
@@ -40,15 +37,7 @@ const Home = () => (
          </Grid.Column>
        </Grid.Row>
      </Grid>
-          
-           
-         
-         
  </>
-
- 
-
-
 );
 
 
