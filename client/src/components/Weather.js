@@ -6,7 +6,7 @@ import { Container, } from "semantic-ui-react";
   state = { weather: [], };
 
   componentDidMount() {
-    axios.get('http://api.openweathermap.org/data/2.5/weather?zip=84101,us&?units=imperial&APPID=562dea345b9be724579a871c814338dd')
+    axios.get('http://api.openweathermap.org/data/2.5/weather?zip=84101,us&units=imperial&APPID=562dea345b9be724579a871c814338dd')
      .then(res => {
        this.setState({ weather: [res.data] });
      })
@@ -18,13 +18,14 @@ import { Container, } from "semantic-ui-react";
   renderWeather = () => {
     return this.state.weather.map( w => 
     <ul>
-      <li>{w.name}</li>
-      <li>{w.main.humidity}</li>
-      <li>{w.main.temp}</li>
-      <li>{w.clouds.all}</li>
-      <li>{w.timezone}</li>
+      <li>Name: {w.name}</li>
+      <li>Longitutde: {w.coord.lon}</li>
+      <li>Latitude: {w.coord.lat}</li>
+      <li>Temperature: {w.main.temp}</li>
+      <li>Humidity: {w.main.humidity}</li>
+      <li>Timezone: {w.timezone}</li>
+      <li>Visibility: {w.visibility}</li>
 
-      
     </ul>)
   }
 
