@@ -11,7 +11,7 @@ class Quote extends React.Component {
    };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     axios.get("/api/quotes")
       .then( res => {
         let data = res.data
@@ -33,8 +33,8 @@ class Quote extends React.Component {
     const { text, name, } = this.state
     return (
       <>
-      <h4>"{text}"</h4>
-      <h4> - {name}</h4>
+      <Header as="h4">"{text}"</Header>
+      <Header as="h5"> - {name}</Header>
       </>
     )
   }
