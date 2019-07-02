@@ -3,13 +3,10 @@ import axios from 'axios'
 import {Header, } from "semantic-ui-react"
 
 class Quote extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      name: "", 
-      text: ""
+  state = {
+      quotes: [],
    };
-  }
+  
 
   componentDidMount() {
     axios.get("/api/quotes")
@@ -19,8 +16,8 @@ class Quote extends React.Component {
         let randomQuote = data[quoteNum] //actual quote
 
         this.setState({
-           text: randomQuote['text'],
-           name: randomQuote['name']
+           text: randomQuote['body'],
+           name: randomQuote['author']
         })
      })
        

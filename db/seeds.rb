@@ -1,7 +1,7 @@
 100.times do
   Quote.create(
-    name: Faker::Name.name,
-    text: Faker::Quote.famous_last_words
+    author: Faker::Name.name,
+    body: Faker::Quote.famous_last_words
   )
 end
 
