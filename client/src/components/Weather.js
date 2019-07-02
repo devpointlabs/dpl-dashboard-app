@@ -24,7 +24,7 @@ import { Container, } from "semantic-ui-react";
       <li>High: {w.main.temp_max}℉</li>
       <li>Low: {w.main.temp_min}℉</li>
       <li>Currently: {w.main.temp}℉</li>
-      <li>Humidity: {w.main.humidity}</li>
+      <li>Humidity: {w.main.humidity}%</li>
       <li>Sky: {w.clouds.all}</li>
       <li>TimeZone: {w.timezone}</li>
 

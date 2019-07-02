@@ -1,5 +1,5 @@
 import React from "react"
-import Quote from './Quote'
+import Quote from './quotes/Quote'
 import Weather from './Weather'
 import YouTube from './YouTube'
 import { Header, Grid,  } from "semantic-ui-react";
@@ -10,7 +10,7 @@ import Clock from './Clock'
 // if any one would like has a better way or idea, go with it. This is temp solution
 function CurrentDate() {
   var tempDate = new Date();
-  var date = (tempDate.getMonth()+1) + '-' + tempDate.getDate() + '-' +  tempDate.getFullYear()
+  var date = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' +  tempDate.getFullYear()
   const today = "Today's date:  "+date;
   return (
    <p>{today}</p>
@@ -23,6 +23,14 @@ const Home = () => (
 
   <> 
     <Grid celled>
+       <Grid.Row>
+         <Grid.Column width={8}>
+          <CurrentDate/>
+          </Grid.Column>
+          <Grid.Column textAlign={'right'} width={8}>
+          <Clock/>
+        </Grid.Column>
+      </Grid.Row>
         <Grid.Row>
           <Grid.Column width={4}>
           <Header>Quote of Day:</Header>
@@ -33,23 +41,27 @@ const Home = () => (
              add your component here
           </Grid.Column>
           <Grid.Column width={4}>
-          <CurrentDate/> <Clock/>
-
+          <Header as="h3">Current Weather</Header>
            <Weather/>
           </Grid.Column>
         </Grid.Row>
 
        <Grid.Row>
           <Grid.Column width={5}>
-          <Header>Upcoming Events:</Header>
-          <p>Events</p>
-          <p>Events</p>
-          <p>Events</p>
+           <Header>Upcoming Events:</Header>
+            <p>Events</p>
+            <p>Events</p>
+            <p>Events</p>
           </Grid.Column>
          <Grid.Column width={11}>
          <YouTube />
          </Grid.Column>
        </Grid.Row>
+       <Grid.Row>
+         <Grid.Column textAlign={'center'} width={16}>
+          <Header>Twitter Feed Ticker Here?</Header>
+          </Grid.Column>
+      </Grid.Row>
      </Grid>
           
            
