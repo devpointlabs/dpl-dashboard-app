@@ -31,10 +31,10 @@ handleSubmit = (e) => {
   const { match: { params: { id } }, history: { push } } = this.props
   if (id) {
     axios.put(`/api/quotes/${id}`, quote)
-      .then(res => push(`/quotes/${id}`))
+      .then(res => push("/quotes"))
   } else {
     axios.post(`/api/quotes`, quote)
-      .then(res => push(`/quotes/${res.data.id}`))
+      .then(res => push("/quotes"))
   }
 }
 

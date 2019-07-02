@@ -41,7 +41,8 @@ state = { quotes: [], dailyQuote: [], }
           <Button 
            color='red' 
            icon basic 
-           onClick={() => this.destroyQuote(quote.id)}>
+           onClick={() => this.destroyQuote(quote.id)}
+           >
            <Icon name='trash' /> 
           </Button>
 
@@ -75,10 +76,12 @@ state = { quotes: [], dailyQuote: [], }
       //We want to create our own quote database to pull from
      //push this quote to the dailyQuote array in state?
     }
-    
+
     destroyQuote = (id) => {
+      console.log(id)
       axios.delete(`/api/quotes/${id}`)
         .then(res => {
+          this.props.history.push("/quotes")
           console.log(res)
       })
     }

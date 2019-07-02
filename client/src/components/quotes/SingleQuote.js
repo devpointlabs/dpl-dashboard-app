@@ -9,4 +9,5 @@ class SingleQuote extends React.Component {
   }
 }
 
+
 export default SingleQuote

@@ -20,8 +20,8 @@ function CurrentDate() {
 
 const Home = () => (
   <> 
-    <Grid celled only="large screen" >
-       <Grid.Row color="purple" inverted >
+    <Grid celled only={"large screen"} >
+       <Grid.Row color="purple" inverted="true">
          <Grid.Column width={8}>
           <CurrentDate/>
           </Grid.Column>
@@ -46,7 +46,6 @@ const Home = () => (
            <Weather/>
           </Grid.Column>
         </Grid.Row>
-
 
        <Grid.Row >
           <Grid.Column width={5} color="purple">
