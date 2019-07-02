@@ -4,8 +4,19 @@ import Weather from './Weather'
 import YouTube from './YouTube'
 import styled from 'styled-components'
 import { Header, Grid,  } from "semantic-ui-react";
+import Clock from './Clock'
 
-
+// I don't really like this function, I would like to Change the 
+// month and day to the words instead of numbers
+// if any one would like has a better way or idea, go with it. This is temp solution
+function CurrentDate() {
+  var tempDate = new Date();
+  var date = (tempDate.getMonth()+1) + '-' + tempDate.getDate() + '-' +  tempDate.getFullYear()
+  const today = "Today's date:  "+date;
+  return (
+   <p>{today}</p>
+  );
+}
 
 const Home = () => (
   <> 
@@ -19,8 +30,13 @@ const Home = () => (
              <Header color="purple" inverted>Todays Topic:</Header>
              add your component here
           </Grid.Column>
+
           <Grid.Column width={4} color="grey">
             <Header color="purple" inverted>Weather & Time</Header>
+          <Grid.Column width={4}>
+          <CurrentDate/> <Clock/>
+
+
            <Weather/>
           </Grid.Column>
         </Grid.Row>
