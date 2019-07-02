@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "devise-axios": "^1.0.24"
+    "devise-axios": "^1.0.24",
+    "styled-components": "^4.3.2"
   }
 }

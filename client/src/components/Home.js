@@ -21,20 +21,21 @@ function CurrentDate() {
 const Home = () => (
   <> 
     <Grid celled only="large screen" >
-       <Grid.Row>
+       <Grid.Row color="purple" inverted >
          <Grid.Column width={8}>
           <CurrentDate/>
           </Grid.Column>
           <Grid.Column textAlign={'right'} width={8}>
           <Clock/>
         </Grid.Column>
-      </Grid.Row>    
+      </Grid.Row> 
+
         <Grid.Row display="flex">
           <Grid.Column width={4} color="grey" >
           <Header color="purple" inverted>Quote of Day:</Header>
-
           <Quote />
           </Grid.Column>
+
           <Grid.Column width={8} color="grey">
              <Header color="purple" inverted>Todays Topic:</Header>
              add your component here
@@ -59,9 +60,10 @@ const Home = () => (
          <YouTube />
          </Grid.Column>
        </Grid.Row>
-       <Grid.Row>
+
+       <Grid.Row color="grey" inverted>
          <Grid.Column textAlign={'center'} width={16}>
-          <Header>Twitter Feed Ticker Here?</Header>
+          <Header color="purple" inverted>Twitter Feed Ticker Here?</Header>
           </Grid.Column>
       </Grid.Row>
      </Grid>
