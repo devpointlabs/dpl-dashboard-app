@@ -1,43 +1,56 @@
-import React from "react";
-import axios from "axios";
+import React from 'react';
 import { Container, } from "semantic-ui-react";
 
- class Weather extends React.Component {
+
+
+class Weather extends React.Component {
   state = { weather: [], };
 
   componentDidMount() {
-    axios.get('http://api.openweathermap.org/data/2.5/weather?zip=84101,us&units=imperial&APPID=562dea345b9be724579a871c814338dd')
-     .then(res => {
-       this.setState({ weather: [res.data] });
-     })
-    .catch( err => {
-      console.log(err);
-    })
+     this.doTheWeatherStuff()
+  };
+  
+  doTheWeatherStuff = () => {
+    this.fetchWeather()
+    setInterval(
+    this.fetchWeather.bind(this)
+    , 3600000);
   }
 
+  fetchWeather = () => {
+        fetch('http://api.openweathermap.org/data/2.5/weather?zip=84101,us&units=imperial&APPID=562dea345b9be724579a871c814338dd')
+        .then(function(response) {
+          return response.json();
+        })
+        .then((myJson) => {
+          this.setState({weather: myJson});
+        });
+      
+  }
+  
   renderWeather = () => {
-    return this.state.weather.map( w => 
-    <ul>
-      <li>Name: {w.name}</li>
-      <li>Longitutde: {w.coord.lon}</li>
-      <li>Latitude: {w.coord.lat}</li>
-      <li>Temperature: {w.main.temp}</li>
-      <li>Humidity: {w.main.humidity}</li>
-      <li>Timezone: {w.timezone}</li>
-      <li>Visibility: {w.visibility}</li>
+    return (
 
-    </ul>)
-  }
+      <ul>
+        <li>Name: {this.state.weather.name}</li>
+        {/* <li>Longitude: {this.state.weather.coord.lon}</li> */}
+        {/* <li>Latitude: {this.state.weather.coord.lat}</li> */}
+        {/* {<li>Temperature: {this.state.weather.main.temp}</li>} */}
+        {/* <li>Humidity: {this.state.weather.humidity}</li> */}
+        <li>Timezone: {this.state.weather.timezone}</li>
+        <li>Visibility: {this.state.weather.visibility}</li> 
+      </ul>
+      )
+    }
 
   render() {
     return (
       <Container style={{ padding: "30px 0", }}>
-        <br />
-        <br />
         {this.renderWeather()}
       </Container>
     );
   }
 }
 
-export default Weather;
+
+export default Weather; 
