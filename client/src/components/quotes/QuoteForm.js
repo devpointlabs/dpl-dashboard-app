@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Container, Button } from 'semantic-ui-react'
+import { Form, Container, Button, Header,  } from 'semantic-ui-react'
 import axios from 'axios';
 import {Link, } from 'react-router-dom'
 
@@ -40,9 +40,11 @@ handleSubmit = (e) => {
 
 
   render() {
+    const { match: {params: {id, } } } = this.props
     const { body, author, category, } = this.state
     return (
       <Container style={{marginTop: "100px"}}>
+      <Header> {id ? 'Edit' : 'Add'} Quote </Header>
         <Form onSubmit={this.handleSubmit}>
         <Form.Input
         name="body"

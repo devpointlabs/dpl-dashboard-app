@@ -78,11 +78,10 @@ state = { quotes: [], dailyQuote: [], }
     }
 
     destroyQuote = (id) => {
-      console.log(id)
       axios.delete(`/api/quotes/${id}`)
         .then(res => {
-          this.props.history.push("/quotes")
-          console.log(res)
+          const {quotes, } = this.state
+          this.setState({quotes: quotes.filter(q => q.id !== id), })
       })
     }
 

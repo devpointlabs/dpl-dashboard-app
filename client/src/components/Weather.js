@@ -34,9 +34,7 @@ import { Container, } from "semantic-ui-react";
 
   render() {
     return (
-      <Container style={{ padding: "30px 0", }}>
-        <br />
-        <br />
+      <Container>
         {this.renderWeather()}
       </Container>
     );

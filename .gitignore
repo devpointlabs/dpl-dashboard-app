@@ -13,7 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 .env
-./client/src/components/youtube/YTKey.js
+../client/src/components/youtube/YTKey.js
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep

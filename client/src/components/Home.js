@@ -1,14 +1,14 @@
 import React from "react"
-import Quote from './quotes/Quote'
+import Quote from './quotes/RandQuote'
 import Weather from './Weather'
-import YouTube from './YouTube'
-import styled from 'styled-components'
+import YouTube from './youtube/YouTube'
+// import styled from 'styled-components'
 import { Header, Grid,  } from "semantic-ui-react";
 import Clock from './Clock'
 
 // I don't really like this function, I would like to Change the 
 // month and day to the words instead of numbers
-// if any one would like has a better way or idea, go with it. This is temp solution
+// if any one would like to or has a better way or idea, go with it. This is temp solution
 function CurrentDate() {
   var tempDate = new Date();
   var date = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' +  tempDate.getFullYear()
@@ -20,17 +20,17 @@ function CurrentDate() {
 
 const Home = () => (
   <> 
-    <Grid celled only={"large screen"} >
-       <Grid.Row color="purple" inverted="true">
+    <Grid celled style={{height: '100vh', width: '1127px', marginTop: "30px",}} >
+       <Grid.Row color="purple" style={{height: '9%'}}>
          <Grid.Column width={8}>
-          <CurrentDate/>
+          <CurrentDate />
           </Grid.Column>
           <Grid.Column textAlign={'right'} width={8}>
           <Clock/>
         </Grid.Column>
       </Grid.Row> 
 
-        <Grid.Row display="flex">
+        <Grid.Row width={8} style={{height: '30%'}} display="flex">
           <Grid.Column width={4} color="grey" >
           <Header color="purple" inverted>Quote of Day:</Header>
           <Quote />
@@ -47,7 +47,7 @@ const Home = () => (
           </Grid.Column>
         </Grid.Row>
 
-       <Grid.Row >
+       <Grid.Row style={{height: '55%'}}>
           <Grid.Column width={5} color="purple">
           <Header color="grey" inverted>Upcoming Events:</Header>
           <h3>Events</h3>
@@ -60,9 +60,9 @@ const Home = () => (
          </Grid.Column>
        </Grid.Row>
 
-       <Grid.Row color="grey" inverted>
+       <Grid.Row color="grey" style={{height: '15%'}}>
          <Grid.Column textAlign={'center'} width={16}>
-          <Header color="purple" inverted>Twitter Feed Ticker Here?</Header>
+          <Header color="purple">Twitter Feed Ticker Here?</Header>
           </Grid.Column>
       </Grid.Row>
      </Grid>

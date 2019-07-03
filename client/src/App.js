@@ -11,6 +11,7 @@ import FetchUser from "./components/FetchUser";
 import QuoteShow from "./components/quotes/QuoteShow"
 import QuoteForm from './components/quotes/QuoteForm'
 import SingleQuote from './components/quotes/SingleQuote'
+import Twitter from './components/twitter/Twitter'
 // import ProtectedRoute from "./components/ProtectedRoute";
 
 
@@ -25,6 +26,7 @@ const App = () => (
           
           <Route exact path="/" component={Home} />
           <Route exact path="/youtube" component={YTApp} />
+          <Route exact path="/twitter" component={Twitter} />
           <Route exact path="/quotes" component={QuoteShow} />
           <Route exact path="/quotes/new" component={QuoteForm} />
           <Route exact path="/quotes/:id" component={SingleQuote} />
