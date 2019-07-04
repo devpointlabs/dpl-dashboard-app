@@ -1,7 +1,7 @@
 import React from "react"
 import axios from 'axios'
 import {Link, } from "react-router-dom"
-import {Card, Grid, Button, Icon, Container, } from "semantic-ui-react"
+import {Card, Grid, Button, Icon, Container, Checkbox } from "semantic-ui-react"
 
 
 class QuoteShow extends React.Component {
@@ -54,14 +54,14 @@ state = { quotes: [], dailyQuote: [], }
           <Icon name='pencil' />
           </Button>
           </Link>
-         
-          <Button 
+         <Checkbox label={<label>Make Daily Quote</label>} />
+          {/* <Button 
           color='purple' 
           icon basic 
-          onClick={this.handleUpload}
+          onClick={this.handleUpload(quote.id)}
           >
           <Icon name='upload' />
-          </Button>
+          </Button> */}
         
          </Card.Content>
          </Card>
@@ -70,12 +70,17 @@ state = { quotes: [], dailyQuote: [], }
       </Grid>
     )}
   
-    handleUpload = () => {
-      //this will push the quote choosen to the home.js
-      //where it will change the quote state?
-      //We want to create our own quote database to pull from
-     //push this quote to the dailyQuote array in state?
-    }
+    handleUpload = (id) => {
+    //   axios.get(`/api/quotes/${id}`)
+    //   .then( res => {
+    //     const {dailyQuote, } = this.state
+    //     this.setState({ dailyQuote: res.data })
+    //   })
+     }
+    //   this will push the quote choosen to the home.js
+    //   where it will change the quote state?
+    //   We want to create our own quote database to pull from
+    //  push this quote to the dailyQuote array in state?
 
     destroyQuote = (id) => {
       axios.delete(`/api/quotes/${id}`)

@@ -45,6 +45,7 @@ handleSubmit = (e) => {
     return (
       <Container style={{marginTop: "100px"}}>
       <Header> {id ? 'Edit' : 'Add'} Quote </Header>
+      <Header as="h4">Quote:</Header>
         <Form onSubmit={this.handleSubmit}>
         <Form.Input
         name="body"
@@ -53,6 +54,7 @@ handleSubmit = (e) => {
         onChange={this.handleChange}
         required
         />
+        <Header as="h4">Author:</Header>
         <Form.Input
         name="author"
         placeholder="Author..."
@@ -60,6 +62,7 @@ handleSubmit = (e) => {
         onChange={this.handleChange}
         required
         />
+        <Header as="h4">Category:</Header>
         <Form.Input
         name="category"
         placeholder="Category..."

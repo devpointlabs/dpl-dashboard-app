@@ -6,7 +6,7 @@ class Api::QuotesController < ApplicationController
   end
 
   def show
-    render json: Quote.rand
+    render json: @quote
   end
 
   def create
@@ -19,8 +19,7 @@ class Api::QuotesController < ApplicationController
   end
 
   def update
-    quote = Quote.update(quote_params)
-    if quote.save
+    if @quote.update(quote_params)
       render json: @quote
     else
       render json: @quote.errors, status: 422
@@ -38,6 +37,6 @@ class Api::QuotesController < ApplicationController
   end
 
   def quote_params
-    params.require(:quote).permit(:author, :body, :category)
+    params.require(:quote).permit(:author, :body, :category, :current_quote)
   end
 end
