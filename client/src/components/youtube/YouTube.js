@@ -22,8 +22,8 @@ class YouTube extends React.Component {
            title="YT"
            id="ytplayer" 
            type="text/html" 
-           width="700" 
-           height="400"
+           width="1080" 
+           height="450"
            src="https://www.youtube.com/embed/n5uz7egB9tA?autoplay=1&loop=1&modestbranding=1"
            frameBorder="0">
            </iframe>

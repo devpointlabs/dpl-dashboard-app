@@ -1,4 +1,4 @@
-ActiveRecord::Schema.define(version: 2019_07_03_223310) do
+ActiveRecord::Schema.define(version: 2019_07_08_204553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -13,6 +13,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_223310) do
     t.string "author"
     t.string "category"
     t.boolean "current_quote"
+    t.string "selected_id"
   end
 
   create_table "users", force: :cascade do |t|
