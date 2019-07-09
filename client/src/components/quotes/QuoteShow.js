@@ -1,11 +1,11 @@
 import React from "react"
 import axios from 'axios'
 import {Link, } from "react-router-dom"
-import {Card, Grid, Button, Icon, Container, } from "semantic-ui-react"
+import {Card, Grid, Button, Icon, Container, Radio, } from "semantic-ui-react"
 
 
 class QuoteShow extends React.Component {
-state = { quotes: [], dailyQuote: [], }
+state = { quotes: [], dailyQuote: [],  }
 
   componentDidMount() {
     axios.get("/api/quotes")
@@ -54,13 +54,12 @@ state = { quotes: [], dailyQuote: [], }
           <Icon name='pencil' />
           </Button>
           </Link>
-         
-          <Button 
-          color='purple' 
-          icon basic 
-          onClick={this.handleUpload}
-          >
-          <Icon name='upload' />
+         <Button 
+         color="green"
+         basic
+         onClick={() => this.setQuote(quote.id)}
+         >
+          <Radio label="Daily Quote?" /> 
           </Button>
         
          </Card.Content>
@@ -69,27 +68,35 @@ state = { quotes: [], dailyQuote: [], }
         </Card.Group>
       </Grid>
     )}
-  
-    handleUpload = () => {
-      //this will push the quote choosen to the home.js
-      //where it will change the quote state?
-      //We want to create our own quote database to pull from
-     //push this quote to the dailyQuote array in state?
+
+    getUniqId() {
+      return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
     }
 
-    destroyQuote = (id) => {
-      console.log(id)
-      axios.delete(`/api/quotes/${id}`)
-        .then(res => {
-          this.props.history.push("/quotes")
-          console.log(res)
+    setQuote = (id,) => {
+      axios.get(`/api/quotes/${id}`)
+      .then(res => {
+        let {current_quote} = this.state.quotes
+        this.setState({current_quote: !current_quote })
+      console.log(res.data.current_quote)
       })
     }
-
-
-  render() {
-    return(
-      
+  
+    
+    destroyQuote = (id) => {
+      axios.delete(`/api/quotes/${id}`)
+      .then(res => {
+        const {quotes, } = this.state
+        this.setState({quotes: quotes.filter(q => q.id !== id), })
+      })
+    }
+    
+    
+    render() {
+      return(
+        
         <Container style={{marginTop: "25px"}}>
           <Link to="/quotes/new">
            <Button inverted color="green">
@@ -100,8 +107,19 @@ state = { quotes: [], dailyQuote: [], }
         {this.allQuotes()}
       </Container>
       
-    )
+      )
+    }
   }
-}
-
-export default QuoteShow
+  
+  export default QuoteShow
+    //handleUpload = (id) => {
+    //   axios.get(`/api/quotes/${id}`)
+    //   .then( res => {
+    //     const {dailyQuote, } = this.state
+    //     this.setState({ dailyQuote: res.data })
+    //   })
+    // }
+    //   this will push the quote choosen to the home.js
+    //   where it will change the quote state?
+    //   We want to create our own quote database to pull from
+    //  push this quote to the dailyQuote array in state?

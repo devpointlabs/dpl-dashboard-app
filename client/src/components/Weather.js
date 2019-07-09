@@ -9,10 +9,8 @@ import { Container, } from "semantic-ui-react";
     axios.get('http://api.openweathermap.org/data/2.5/weather?zip=84101,us&units=imperial&APPID=d598523c59a24c73bd4885f0bc4bfd7e')
      .then(res => {
        this.setState({ weather: [res.data] });
-       console.log(this.state)
      })
     .catch( err => {
-  
       console.log(err);
     })
   }
@@ -34,9 +32,7 @@ import { Container, } from "semantic-ui-react";
 
   render() {
     return (
-      <Container style={{ padding: "30px 0", }}>
-        <br />
-        <br />
+      <Container>
         {this.renderWeather()}
       </Container>
     );
