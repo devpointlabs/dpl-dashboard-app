@@ -7,7 +7,7 @@ import YouTube from './youtube/YouTube'
 // import styled from 'styled-components'
 import { Header, Grid,  } from "semantic-ui-react";
 import Clock from './Clock'
-import Twitter from './twitter/Twitter'
+// import Twitter from './twitter/Twitter'
 
 // I don't really like this function, I would like to Change the 
 // month and day to the words instead of numbers

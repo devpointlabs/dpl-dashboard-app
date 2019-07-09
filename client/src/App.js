@@ -7,7 +7,7 @@ import YTApp from "./components/youtube/YTApp"
 import Register from "./components/auth/Register";
 import { Switch, Route } from "react-router-dom";
 import FetchUser from "./components/auth/FetchUser";
-import QuoteShow from "./components/quotes/QuoteShow"
+import QuoteShow from "./components/quotes/AllQuotes"
 import QuoteForm from './components/quotes/QuoteForm'
 import DailyQuote from './components/quotes/DailyQuote'
 import Twitter from './components/twitter/Twitter'
