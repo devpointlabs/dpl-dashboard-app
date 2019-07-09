@@ -112,12 +112,12 @@ state = { quotes: [], dailyQuote: [],  }
   }
   
   export default QuoteShow
-    //handleUpload = (id) => {
+    // handleUpload = (id) => {
     //   axios.get(`/api/quotes/${id}`)
     //   .then( res => {
-    //     const {dailyQuote, } = this.state
-    //     this.setState({ dailyQuote: res.data })
-    //   })
+    //     const {setQuote, } = this.state
+    //     this.setState({ setQuote: res.data })
+    //   }, [])
     // }
     //   this will push the quote choosen to the home.js
     //   where it will change the quote state?
