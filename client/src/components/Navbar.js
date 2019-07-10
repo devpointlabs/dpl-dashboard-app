@@ -7,9 +7,9 @@ class Navbar extends React.Component {
   state = { isHidden: false, }
 
   toggleDisplay = () => {
-    this.setState({
-      isHidden: !this.state.isHidden
-    })
+    return(
+      <div></div>
+    )
   }
   
 
@@ -56,7 +56,7 @@ class Navbar extends React.Component {
         <Menu pointing secondary>
           <Button
             color="blue"
-            onClick={() => toggleDisplay(this.props.history)}
+            // onClick={() => toggleDisplay(this.props.history)}
           >
             Toggle
           </Button>
