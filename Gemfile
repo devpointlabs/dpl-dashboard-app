@@ -24,13 +24,14 @@ gem 'puma', '~> 3.11'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
+gem 'twitter'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 gem "devise_token_auth", "~> 1.0.0"
 
 group :development, :test do
   gem "pry-rails"
+  gem 'dotenv-rails'
   gem "faker", :git => "https://github.com/stympy/faker.git", :branch => "master"
 end
 
