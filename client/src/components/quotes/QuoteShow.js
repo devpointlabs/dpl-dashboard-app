@@ -79,7 +79,7 @@ state = { quotes: [], dailyQuote: [],  }
       axios.get(`/api/quotes/${id}`)
       .then(res => {
         let {current_quote} = this.state.quotes
-        this.setState({current_quote: !current_quote })
+        // this.setState({current_quote: !current_quote })
       console.log(res.data.current_quote)
       })
     }

@@ -11,6 +11,7 @@ import QuoteShow from "./components/quotes/QuoteShow"
 import QuoteForm from './components/quotes/QuoteForm'
 import DailyQuote from './components/quotes/DailyQuote'
 import Twitter from './components/twitter/Twitter'
+import Style from 'styled-components';
 // import ProtectedRoute from "./components/ProtectedRoute";
 
 
@@ -18,7 +19,7 @@ const App = () => (
 
   <>
 
-    <Navbar />
+    <Navbar/>
     <FetchUser>
       
         <Switch>
@@ -41,5 +42,6 @@ const App = () => (
   </>
 
 );
+
 
 export default App;
