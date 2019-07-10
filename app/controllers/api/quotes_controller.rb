@@ -18,6 +18,12 @@ class Api::QuotesController < ApplicationController
     end
   end
 
+  def current
+    quote = Quote.find(params[:id])
+    quote.update(current_quote: !quote.current_quote)
+    render json: quote
+  end
+
   def update
     if @quote.update(quote_params)
       render json: @quote

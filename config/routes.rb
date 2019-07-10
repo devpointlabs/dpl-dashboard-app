@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   namespace :api do
-    resources :quotes
+    resources :quotes, only: [:index, :update, :destroy, :create, :show]
+    put 'current/:id', to: 'quotes#current'
   end
 end
