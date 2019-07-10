@@ -5,7 +5,7 @@ import {Card, Grid, Button, Icon, Container, Radio, } from "semantic-ui-react"
 
 
 class QuoteShow extends React.Component {
-state = { quotes: [], dailyQuote: [],  }
+state = { quotes: [],   }
 
   componentDidMount() {
     axios.get("/api/quotes")
@@ -54,14 +54,15 @@ state = { quotes: [], dailyQuote: [],  }
           <Icon name='pencil' />
           </Button>
           </Link>
-         <Button 
-         color="green"
-         basic
-         onClick={() => this.setQuote(quote.id)}
-         >
-          <Radio label="Daily Quote?" /> 
+          
+          <Button 
+          color="green"
+          basic
+          onClick={() => this.currentQuote(quote.id)}
+          >
+          Daily Quote
           </Button>
-        
+          
          </Card.Content>
          </Card>
           )}
@@ -69,19 +70,17 @@ state = { quotes: [], dailyQuote: [],  }
       </Grid>
     )}
 
-    getUniqId() {
-      return Math.floor((1 + Math.random()) * 0x10000)
-        .toString(16)
-        .substring(1);
-    }
-
-    setQuote = (id,) => {
-      axios.get(`/api/quotes/${id}`)
-      .then(res => {
-        let {current_quote} = this.state.quotes
-        // this.setState({current_quote: !current_quote })
-      console.log(res.data.current_quote)
-      })
+    currentQuote = (id) => {
+      axios.put(`/api/current/${id}`)
+        .then( ({ data }) => {
+          const quotes = this.state.quotes.map( quote => {
+            if (quote.id === id)
+              return data
+            return quote
+          });
+  
+          this.setState({ quotes });
+        });
     }
   
     

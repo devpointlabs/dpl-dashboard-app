@@ -17,7 +17,7 @@ class Weather extends React.Component {
 };
 
   fetchWeather = () => {
-        fetch('http://api.openweathermap.org/data/2.5/weather?zip=84101,us&?units=imperial&APPID=562dea345b9be724579a871c814338dd')
+        fetch('http://api.openweathermap.org/data/2.5/weather?zip=84101,us&units=imperial&APPID=562dea345b9be724579a871c814338dd')
         .then(function(response) {
           return response.json();
         })
