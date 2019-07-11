@@ -2,9 +2,13 @@ import React from "react";
 import { AuthConsumer } from "../providers/AuthProvider";
 import { Menu, } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
-import Toggle from './Toggle'
+
 
 class Navbar extends React.Component {
+
+  state = {
+    show: false,
+  }
 
   rightNavItems = () => {
     const {
@@ -43,11 +47,20 @@ class Navbar extends React.Component {
     }
   };
 
+  handleToggle = () => {
+    this.setState(state => ({
+      show: !state.show
+    }))
+  }
+
   render() {
+    if (this.state.show) {
     return (
       <div>
         <Menu pointing secondary>
-          <Toggle />
+        <button onClick={this.handleToggle}>
+          Toggle Navbar
+        </button>
           <Link to="/">
             <Menu.Item
               name="home"
@@ -80,6 +93,13 @@ class Navbar extends React.Component {
         </Menu>
       </div>
     );
+    }
+    else 
+      return (
+        <button onClick={this.handleToggle}>
+          
+        </button>
+      )
   }
 }
 

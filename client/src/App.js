@@ -11,18 +11,12 @@ import QuoteShow from "./components/quotes/AllQuotes"
 import QuoteForm from './components/quotes/QuoteForm'
 import DailyQuote from './components/quotes/DailyQuote'
 import Twitter from './components/twitter/Twitter'
-<<<<<<< HEAD
-import Style from 'styled-components';
-=======
-
->>>>>>> 9234eafaf1aedd372ee05dfa1c81b2e8aa8f0cc1
 // import ProtectedRoute from "./components/ProtectedRoute";
 
 
 const App = () => (
 
   <>
-
     <Navbar/>
     <FetchUser>
       
