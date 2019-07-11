@@ -1,0 +1,27 @@
+{
+  "name": "dpl-dashboard-app",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "cd client && npm install --only=dev && npm install && npm run build && cd ..",
+  "deploy": "cp -a client/build/. public/",
+  "heroku-postbuild": "npm run build && npm run deploy && echo 'Client Built'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devpointlabs/dpl-dashboard-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devpointlabs/dpl-dashboard-app/issues"
+  },
+  "homepage": "https://github.com/devpointlabs/dpl-dashboard-app#readme"
+}
