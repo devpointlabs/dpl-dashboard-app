@@ -1,17 +1,10 @@
 import React from "react";
 import { AuthConsumer } from "../providers/AuthProvider";
-import { Menu, Button } from "semantic-ui-react";
+import { Menu, } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
+import Toggle from './Toggle'
 
 class Navbar extends React.Component {
-  state = { isHidden: false, }
-
-  toggleDisplay = () => {
-    return(
-      <div></div>
-    )
-  }
-  
 
   rightNavItems = () => {
     const {
@@ -54,12 +47,7 @@ class Navbar extends React.Component {
     return (
       <div>
         <Menu pointing secondary>
-          <Button
-            color="blue"
-            // onClick={() => toggleDisplay(this.props.history)}
-          >
-            Toggle
-          </Button>
+          <Toggle />
           <Link to="/">
             <Menu.Item
               name="home"

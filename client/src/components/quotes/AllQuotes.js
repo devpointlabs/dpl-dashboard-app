@@ -1,7 +1,7 @@
 import React from "react"
 import axios from 'axios'
 import {Link, } from "react-router-dom"
-import {Card, Grid, Button, Icon, Container, Radio, } from "semantic-ui-react"
+import {Card, Grid, Button, Icon, Container, } from "semantic-ui-react"
 
 
 class QuoteShow extends React.Component {
@@ -54,6 +54,7 @@ state = { quotes: [],   }
           <Icon name='pencil' />
           </Button>
           </Link>
+
           
           <Button 
           color="green"
@@ -62,7 +63,7 @@ state = { quotes: [],   }
           >
           Daily Quote
           </Button>
-          
+         
          </Card.Content>
          </Card>
           )}

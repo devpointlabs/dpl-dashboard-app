@@ -1,14 +1,30 @@
 import React from 'react'
-// This will loop thru the quote array and look for the selected_id:string or the current quote:boolean
+import axios from 'axios'
+import {Card, } from 'semantic-ui-react'
+// This will loop thru the quote array and look for the current quote:boolean
 //
 
 class DailyQuote extends React.Component {
+state = { quotes: [], }
 
+componentDidMount() {
+  axios.get("/api/quotes")
+    .then( res => { 
+      this.setState({ quotes: res.data })
+   })
+   .catch( err => {
+     console.log(err.response)
+   })
+}
   
+
+
 
   render() {
     return(
-      <div>Test</div>
+      <Card>
+      test
+      </Card>
     )
   }
 }
