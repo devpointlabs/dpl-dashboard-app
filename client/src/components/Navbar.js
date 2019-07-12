@@ -56,7 +56,7 @@ class Navbar extends React.Component {
   render() {
     if (this.state.show) {
     return (
-      <div>
+      <div >
         <Menu pointing secondary>
         <button onClick={this.handleToggle}>
           Toggle Navbar
@@ -97,7 +97,6 @@ class Navbar extends React.Component {
     else 
       return (
         <button onClick={this.handleToggle}>
-          
         </button>
       )
   }
