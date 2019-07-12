@@ -10,11 +10,13 @@ class YTApp extends React.Component {
         selectedVideo: null
     }
     handleSubmit = async (termFromSearchBar) => {
+        console.log(YTKey)
         const response = await YTKey.get('/search', {
             params: {
                 q: termFromSearchBar
             }
         })
+       
         this.setState({
             videos: response.data.items
         })

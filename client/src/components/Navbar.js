@@ -52,7 +52,7 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === "/"}
             />
           </Link>
-          <Link to="/Youtube">
+          {/* <Link to="/Youtube">
             <Menu.Item
               name="Youtube"
               id="Youtube"
@@ -71,6 +71,13 @@ class Navbar extends React.Component {
               name="Quotes"
               id="Quotes"
               active={this.props.location.pathname === "/quotes"}
+            />
+          </Link>
+          <Link to="/twitter">
+            <Menu.Item
+              name="Twitter"
+              id="Twitter"
+              active={this.props.location.pathname === "/twitter"}
             />
           </Link>
           {this.rightNavItems()}
