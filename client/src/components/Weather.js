@@ -44,12 +44,12 @@ class Weather extends React.Component {
    render() {
     return (
       <Container>
-
         {this.renderWeather()}
       </Container>
     );
   }
 }
+
 
 
 export default Weather; 
