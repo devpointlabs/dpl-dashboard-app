@@ -54,13 +54,10 @@ const Home = () => (
 
        <Grid.Row style={{height: '60%'}}>
           <Grid.Column width={5} color="black">
-          <Header color="grey" inverted>Upcoming Events:</Header>
-          <h3>Events</h3>
-          <h3>Events</h3>
-          <h3>Events</h3>
-
+          <CalApp />
           </Grid.Column>
          <Grid.Column width={11} color="black">
+  
          <YouTube />
          </Grid.Column>
        </Grid.Row>
