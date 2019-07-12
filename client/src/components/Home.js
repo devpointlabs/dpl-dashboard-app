@@ -24,7 +24,7 @@ function CurrentDate() {
 
 const Home = () => (
   <> 
-    <Grid celled style={{height: '100vh', width: 'max',}} >
+    <Grid celled style={{height: '100vh', width: '100vw',}} >
        <Grid.Row color="black" style={{height: '6%'}}>
          <Grid.Column width={8}>
           <CurrentDate />
@@ -65,12 +65,11 @@ const Home = () => (
          </Grid.Column>
        </Grid.Row>
 
-       <Grid.Row color="grey" style={{height: '14%'}}>
+       {/* <Grid.Row color="grey" style={{height: '14%'}}>
          <Grid.Column textAlign={'center'} width={16}>
           <Header color="black">Latest Tweet Here</Header>
-          
           </Grid.Column>
-      </Grid.Row>
+      </Grid.Row> */}
      </Grid>
  </>
 );
