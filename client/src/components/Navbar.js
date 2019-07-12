@@ -52,7 +52,7 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === "/"}
             />
           </Link>
-          {/* <Link to="/Youtube">
+          <Link to="/Youtube">
             <Menu.Item
               name="Youtube"
               id="Youtube"
