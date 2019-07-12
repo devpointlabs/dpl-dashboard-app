@@ -4,6 +4,7 @@ import Quote from './quotes/RandQuote'
 // import QuoteShow from './quotes/QuoteShow'
 import Weather from './Weather'
 import YouTube from './youtube/YouTube'
+import CalApp from './calendar/CalApp'
 // import styled from 'styled-components'
 import { Header, Grid,  } from "semantic-ui-react";
 import Clock from './Clock'
