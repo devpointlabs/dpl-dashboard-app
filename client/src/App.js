@@ -4,6 +4,7 @@ import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import YTApp from "./components/youtube/YTApp"
+import CalApp from "./components/calendar/CalApp";
 import Register from "./components/Register";
 import { Switch, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
@@ -25,6 +26,8 @@ const App = () => (
           
           <Route exact path="/" component={Home} />
           <Route exact path="/youtube" component={YTApp} />
+          {/* <ProtectedRoute exact path="/calendar" component={CalApp} /> */}
+          <Route exact path="/calendar" component={CalApp} />
           <Route exact path="/quotes" component={QuoteShow} />
           <Route exact path="/quotes/new" component={QuoteForm} />
           <Route exact path="/quotes/:id" component={SingleQuote} />

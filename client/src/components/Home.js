@@ -49,12 +49,11 @@ const Home = () => (
 
        <Grid.Row >
           <Grid.Column width={5} color="purple">
-          <Header color="grey" inverted>Upcoming Events:</Header>
-          <h3>Events</h3>
-          <h3>Events</h3>
-          <h3>Events</h3>
-
-          </Grid.Column>
+          {/* <Header color="grey" inverted>
+            Upcoming Events:
+          </Header> */}
+          <CalApp />
+        </Grid.Column>
          <Grid.Column width={11} color="purple">
          <YouTube />
          </Grid.Column>
