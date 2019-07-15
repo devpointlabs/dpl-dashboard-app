@@ -2,8 +2,11 @@ import React from "react"
 import Quote from './quotes/RandQuote'
 import Weather from './Weather'
 import YouTube from './youtube/YouTube'
-import { Header, Grid, Responsive,  } from "semantic-ui-react";
+import CalApp from './calendar/CalApp'
+// import styled from 'styled-components'
+import { Header, Grid, Responsive } from "semantic-ui-react";
 import Clock from './Clock'
+
 // Playing with the Responsive tag.Not sure how it will look on the big screen
 
 // I don't really like this function, I would like to Change the 
@@ -21,7 +24,7 @@ function CurrentDate() {
 
 const Home = () => (
   <> 
-    <Grid celled style={{height: '100vh', width: 'max',}} >
+    <Grid celled style={{height: '100vh', width: '100vw',}} >
        <Grid.Row color="black" style={{height: '6%'}}>
          <Grid.Column width={8}>
            <CurrentDate />
@@ -50,13 +53,10 @@ const Home = () => (
 
        <Grid.Row style={{height: '60%'}}>
           <Grid.Column width={5} color="black">
-          <Header color="grey" inverted>Upcoming Events:</Header>
-          <h3>Events</h3>
-          <h3>Events</h3>
-          <h3>Events</h3>
-
+          <CalApp />
           </Grid.Column>
          <Grid.Column width={11} color="black">
+  
          <YouTube />
          </Grid.Column>
        </Grid.Row>
@@ -64,7 +64,6 @@ const Home = () => (
        {/* <Grid.Row color="grey" style={{height: '14%'}}>
          <Grid.Column textAlign={'center'} width={16}>
           <Header color="black">Latest Tweet Here</Header>
-          
           </Grid.Column>
       </Grid.Row> */}
      </Grid>

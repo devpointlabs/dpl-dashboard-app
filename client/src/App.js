@@ -4,6 +4,8 @@ import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
 import Login from "./components/auth/Login";
 import YTApp from "./components/youtube/YTApp"
+import CalApp from "./components/calendar/CalApp";
+// import Register from "./components/Register";
 import Register from "./components/auth/Register";
 import { Switch, Route } from "react-router-dom";
 import FetchUser from "./components/auth/FetchUser";
@@ -26,6 +28,8 @@ const App = () => (
           
           <Route exact path="/" component={Home} />
           <Route exact path="/youtube" component={YTApp} />
+          {/* <ProtectedRoute exact path="/calendar" component={CalApp} /> */}
+          <Route exact path="/calendar" component={CalApp} />
           <Route exact path="/twitter" component={Twitter} />
           <Route exact path="/quotes" component={QuoteShow} />
           <Route exact path="/quotes/new" component={QuoteForm} />
