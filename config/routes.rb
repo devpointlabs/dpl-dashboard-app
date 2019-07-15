@@ -12,4 +12,9 @@ Rails.application.routes.draw do
     resources :quotes, only: [:index, :update, :destroy, :create, :show]
     put 'current/:id', to: 'quotes#current'
   end
+
+  namespace :api do
+    resources :topics, only: [:indes, :update, :destroy, :create, :show]
+    put 'current/:id', to: 'topics#current'
+  end
 end
