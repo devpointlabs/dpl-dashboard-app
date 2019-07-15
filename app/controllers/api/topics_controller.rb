@@ -38,11 +38,11 @@ class Api::TopicsController < ApplicationController
 
   private
 
-  def set_quote
+  def set_topic
     @topic = Topic.find(params[:id])
   end
 
-  def quote_params
-    params.require(:topic).permit(:author, :body, :category, :current_topic, :selected_id)
+  def topic_params
+    params.require(:topic).permit(:body, :language)
   end
 end

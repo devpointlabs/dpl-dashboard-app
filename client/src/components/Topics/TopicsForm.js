@@ -4,7 +4,7 @@ import axios from 'axios';
 import {Link, } from 'react-router-dom'
 
 class TopicsForm extends React.Component {
-state = { language: '', topic: '', }
+state = { language: '', body: '', }
 
  componentDidMount() {
    const { match: {params: {id, } } } = this.props
@@ -21,7 +21,6 @@ state = { language: '', topic: '', }
  }
 
  handleChange = (e) => {
-  e.preventDefault()
   const { target: { name, value } } = e
   this.setState({ [name]: value })
 }
@@ -42,24 +41,23 @@ handleSubmit = (e) => {
 
   render() {
     const { match: {params: {id, } } } = this.props
-    const { language, topic, } = this.state
+    const { language, body, } = this.state
     return (
       <Container style={{marginTop: "100px"}}>
       <Header> {id ? 'Edit' : 'Add'} Topic </Header>
       <Header as="h4">Language:</Header>
         <Form onSubmit={this.handleSubmit}>
         <Form.Input
-        name="Language"
+        name="language"
         placeholder="Language..."
         value={language}
         onChange={this.handleChange}
-        required
         />
         <Header as="h4">Topic:</Header>
         <Form.Input
-        name="topic"
+        name="body"
         placeholder="Topic..."
-        value={topic}
+        value={body}
         onChange={this.handleChange}
         required
         />

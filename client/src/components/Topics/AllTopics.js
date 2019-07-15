@@ -4,7 +4,7 @@ import {Link, } from "react-router-dom"
 import {Card, Grid, Button, Icon, Container, } from "semantic-ui-react"
 
 
-class TopicShow extends React.Component {
+class AllTopics extends React.Component {
 state = { topics: [],   }
 
   componentDidMount() {
@@ -33,7 +33,7 @@ state = { topics: [],   }
                {topic.language}
               </Card.Header>
               <Card.Meta>
-               {topic.topic}
+               {topic.body}
               </Card.Meta>
             </Card.Content>
 
@@ -111,5 +111,5 @@ state = { topics: [],   }
     }
   }
   
-  export default TopicShow
+  export default AllTopics
  
