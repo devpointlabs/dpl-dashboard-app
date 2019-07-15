@@ -31,7 +31,7 @@ const App = () => (
           <Route exact path="/twitter" component={Twitter} />
           <Route exact path="/quotes" component={QuoteShow} />
           <Route exact path="/quotes/new" component={QuoteForm} />
-          <Route exact path="/quotes/:id/dailyquote" component={DailyQuote} />
+          <Route exact path="/quotes/dailyquote" component={DailyQuote} />
           <Route exact path="/quotes/:id" component={DailyQuote} />
           <Route exact path="/quotes/:id/edit" component={QuoteForm} />
           <Route exact path="/quotes/:id/edit" render={props => <QuoteForm edit {...props} />} />

@@ -56,6 +56,7 @@ state = { quotes: [],   }
           </Link>
 
           
+        {/* <Link to={`/quotes/${quote.id}/dailyquote`}> */}
           <Button 
           color="green"
           basic
@@ -63,6 +64,7 @@ state = { quotes: [],   }
           >
           Daily Quote
           </Button>
+          {/* </Link> */}
          
          </Card.Content>
          </Card>
