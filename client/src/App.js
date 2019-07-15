@@ -13,15 +13,13 @@ import QuoteShow from "./components/quotes/AllQuotes"
 import QuoteForm from './components/quotes/QuoteForm'
 import DailyQuote from './components/quotes/DailyQuote'
 import Twitter from './components/twitter/Twitter'
-
 // import ProtectedRoute from "./components/ProtectedRoute";
 
 
 const App = () => (
 
   <>
-
-    <Navbar />
+    <Navbar/>
     <FetchUser>
       
         <Switch>
@@ -47,5 +45,6 @@ const App = () => (
   </>
 
 );
+
 
 export default App;
