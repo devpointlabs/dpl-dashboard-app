@@ -56,7 +56,7 @@ class Navbar extends React.Component {
   render() {
     if (this.state.show) {
     return (
-      <div>
+      <div >
         <Menu pointing secondary>
         <button onClick={this.handleToggle}>
           Toggle Navbar
@@ -96,6 +96,13 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === "/twitter"}
             />
           </Link>
+          <Link to='/topics'>
+            <Menu.Item 
+              name="Topics"
+              id="Topics"
+              active={this.props.location.pathname === "/topics"}
+            />
+          </Link>
           {this.rightNavItems()}
         </Menu>
       </div>
@@ -104,7 +111,6 @@ class Navbar extends React.Component {
     else 
       return (
         <button onClick={this.handleToggle}>
-          
         </button>
       )
   }
