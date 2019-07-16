@@ -1,9 +1,15 @@
 import React from "react";
 import { AuthConsumer } from "../providers/AuthProvider";
-import { Menu } from "semantic-ui-react";
+import { Menu, } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 
+
 class Navbar extends React.Component {
+
+  state = {
+    show: false,
+  }
+
   rightNavItems = () => {
     const {
       auth: { user, handleLogout },
@@ -41,10 +47,20 @@ class Navbar extends React.Component {
     }
   };
 
+  handleToggle = () => {
+    this.setState(state => ({
+      show: !state.show
+    }))
+  }
+
   render() {
+    if (this.state.show) {
     return (
-      <div>
+      <div >
         <Menu pointing secondary>
+        <button onClick={this.handleToggle}>
+          Toggle Navbar
+        </button>
           <Link to="/">
             <Menu.Item
               name="home"
@@ -73,12 +89,26 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === "/twitter"}
             />
           </Link>
+          <Link to='/topics'>
+            <Menu.Item 
+              name="Topics"
+              id="Topics"
+              active={this.props.location.pathname === "/topics"}
+            />
+          </Link>
           {this.rightNavItems()}
         </Menu>
       </div>
     );
+    }
+    else 
+      return (
+        <button onClick={this.handleToggle}>
+        </button>
+      )
   }
 }
+
 
 export class ConnectedNavbar extends React.Component {
   render() {
@@ -91,3 +121,5 @@ export class ConnectedNavbar extends React.Component {
 }
 
 export default withRouter(ConnectedNavbar);
+
+

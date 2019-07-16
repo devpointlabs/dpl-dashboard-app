@@ -13,15 +13,15 @@ import QuoteShow from "./components/quotes/AllQuotes"
 import QuoteForm from './components/quotes/QuoteForm'
 import DailyQuote from './components/quotes/DailyQuote'
 import Twitter from './components/twitter/Twitter'
-
+import AllTopics from "./components/Topics/AllTopics";
+import TopicsForm from './components/Topics/TopicsForm';
 // import ProtectedRoute from "./components/ProtectedRoute";
 
 
 const App = () => (
 
   <>
-
-    <Navbar />
+    <Navbar/>
     <FetchUser>
       
         <Switch>
@@ -33,10 +33,16 @@ const App = () => (
           <Route exact path="/twitter" component={Twitter} />
           <Route exact path="/quotes" component={QuoteShow} />
           <Route exact path="/quotes/new" component={QuoteForm} />
-          <Route exact path="/quotes/:id/dailyquote" component={DailyQuote} />
+          <Route exact path="/quotes/dailyquote" component={DailyQuote} />
           <Route exact path="/quotes/:id" component={DailyQuote} />
           <Route exact path="/quotes/:id/edit" component={QuoteForm} />
           <Route exact path="/quotes/:id/edit" render={props => <QuoteForm edit {...props} />} />
+          <Route exact path="/topic" component={AllTopics} />
+          <Route exact path="/topics" component={AllTopics} />
+          <Route exact path="/topics/new" component={TopicsForm} />
+          {/* <Route exact path="/topics/:id/dailytopics" component={Topics} /> */}
+          <Route exact path="/topics/:id/edit" component={TopicsForm} />
+          <Route exact path="/topics/:id/edit" render={props => <TopicsForm edti {...props} /> } />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route component={NoMatch} />
@@ -47,5 +53,6 @@ const App = () => (
   </>
 
 );
+
 
 export default App;

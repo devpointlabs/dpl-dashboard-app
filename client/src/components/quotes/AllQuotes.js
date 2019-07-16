@@ -25,6 +25,7 @@ state = { quotes: [],   }
     return (
       
       <Grid style={{marginTop: "25px"}}>
+       <Grid.Column>
         <Card.Group itemsPerRow={4}>
          { quotes.map( quote => 
            <Card key={quote.id}>
@@ -56,6 +57,7 @@ state = { quotes: [],   }
           </Link>
 
           
+        {/* <Link to={`/quotes/${quote.id}/dailyquote`}> */}
           <Button 
           color="green"
           basic
@@ -63,11 +65,13 @@ state = { quotes: [],   }
           >
           Daily Quote
           </Button>
+          {/* </Link> */}
          
          </Card.Content>
          </Card>
           )}
         </Card.Group>
+        </Grid.Column>
       </Grid>
     )}
 
@@ -112,12 +116,12 @@ state = { quotes: [],   }
   }
   
   export default QuoteShow
-    //handleUpload = (id) => {
+    // handleUpload = (id) => {
     //   axios.get(`/api/quotes/${id}`)
     //   .then( res => {
-    //     const {dailyQuote, } = this.state
-    //     this.setState({ dailyQuote: res.data })
-    //   })
+    //     const {setQuote, } = this.state
+    //     this.setState({ setQuote: res.data })
+    //   }, [])
     // }
     //   this will push the quote choosen to the home.js
     //   where it will change the quote state?
