@@ -25,6 +25,7 @@ state = { topics: [],   }
     return (
       
       <Grid style={{marginTop: "25px"}}>
+      <Grid.Column>
         <Card.Group itemsPerRow={4}>
          { topics.map( topic => 
            <Card key={topic.id}>
@@ -35,6 +36,10 @@ state = { topics: [],   }
               <Card.Meta>
                {topic.body}
               </Card.Meta>
+              <Card.Meta>
+               {topic.date}
+              </Card.Meta>
+             
             </Card.Content>
 
          <Card.Content extra>
@@ -56,11 +61,19 @@ state = { topics: [],   }
           </Link>
 
           
-       
+          {/* <Button 
+          color="green"
+          basic
+          onClick={() => this.currentTopic(topic.id)}
+          >
+          Daily Topic
+          </Button> */}
+         
          </Card.Content>
          </Card>
           )}
         </Card.Group>
+        </Grid.Column>
       </Grid>
     )}
 

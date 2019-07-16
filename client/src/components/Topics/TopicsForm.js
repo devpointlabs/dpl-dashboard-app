@@ -4,7 +4,8 @@ import axios from 'axios';
 import {Link, } from 'react-router-dom'
 
 class TopicsForm extends React.Component {
-state = { language: '', body: '', }
+state = { language: '', body: '', date: '', }
+// change date to array maybe to comapare to current date
 
  componentDidMount() {
    const { match: {params: {id, } } } = this.props
@@ -12,8 +13,8 @@ state = { language: '', body: '', }
    if (id)
    axios.get(`/api/topics/${id}`)
    .then(res => {
-     const{language, topic} = res.data
-    this.setState({language, topic, })
+     const{language, body, date} = res.data
+    this.setState({language, body, date})
    })
    .catch(err => {
      console.log(err.response)
@@ -31,17 +32,17 @@ handleSubmit = (e) => {
   const { match: { params: { id } }, history: { push } } = this.props
   if (id) {
     axios.put(`/api/topics/${id}`, topic)
-      .then(res => push("/topic"))
+      .then(res => push("/topics"))
   } else {
     axios.post(`/api/topics`, topic)
-      .then(res => push("/topic"))
+      .then(res => push("/topics"))
   }
 }
 
 
   render() {
     const { match: {params: {id, } } } = this.props
-    const { language, body, } = this.state
+    const { language, body, date } = this.state
     return (
       <Container style={{marginTop: "100px"}}>
       <Header> {id ? 'Edit' : 'Add'} Topic </Header>
@@ -58,6 +59,14 @@ handleSubmit = (e) => {
         name="body"
         placeholder="Topic..."
         value={body}
+        onChange={this.handleChange}
+        required
+        />
+        <Header as="h4">Date:</Header>
+        <Form.Input
+        name="date"
+        placeholder="Date..."
+        value={date}
         onChange={this.handleChange}
         required
         />

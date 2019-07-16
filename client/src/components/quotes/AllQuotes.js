@@ -25,6 +25,7 @@ state = { quotes: [],   }
     return (
       
       <Grid style={{marginTop: "25px"}}>
+       <Grid.Column>
         <Card.Group itemsPerRow={4}>
          { quotes.map( quote => 
            <Card key={quote.id}>
@@ -70,6 +71,7 @@ state = { quotes: [],   }
          </Card>
           )}
         </Card.Group>
+        </Grid.Column>
       </Grid>
     )}
 
