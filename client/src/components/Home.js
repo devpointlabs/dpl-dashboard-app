@@ -14,13 +14,13 @@ import DisplayTopic from './Topics/DisplayTopic'
 class Home extends React.Component {
   state = { tweets: [],}
   
-  componentDidMount() {
-    axios.get('/api/tweets')
-    .then( res => {
-      let current = res.data[0]
-      this.setState({ tweets: [current] }) 
-  })
-}
+//   componentDidMount() {
+//     axios.get('/api/tweets')
+//     .then( res => {
+//       let current = res.data[0]
+//       this.setState({ tweets: [current] }) 
+//   })
+// }
 
   currentTweet = () => (
     <List divided relaxed>
@@ -46,7 +46,7 @@ class Home extends React.Component {
 
   <> 
     <Grid celled style={{height: '100vh', width: '100vw',}} >
-       <Grid.Row color="black" style={{height: '6%'}}>
+       <Grid.Row color="black" style={{height: '8%'}}>
          <Grid.Column width={8}>
            <CurrentDate />
             </Grid.Column>
@@ -85,7 +85,7 @@ class Home extends React.Component {
        <Grid.Row color="grey" style={{height: '15%'}}>
          <Grid.Column textAlign={'center'} width={16}>
           <Header color="black">
-          {this.currentTweet()}
+          {/* {this.currentTweet()} */}
           </Header>
           </Grid.Column>
       </Grid.Row>

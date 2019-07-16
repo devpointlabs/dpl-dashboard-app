@@ -2,9 +2,11 @@ import React from 'react'
 import { Form, Container, Button, Header,  } from 'semantic-ui-react'
 import axios from 'axios';
 import {Link, } from 'react-router-dom'
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css'
 
 class TopicsForm extends React.Component {
-state = { language: '', body: '', date: '', }
+state = { language: '', body: '', date: '', selectedDay: '' }
 // change date to array maybe to comapare to current date
 
  componentDidMount() {
@@ -13,8 +15,8 @@ state = { language: '', body: '', date: '', }
    if (id)
    axios.get(`/api/topics/${id}`)
    .then(res => {
-     const{language, body, date} = res.data
-    this.setState({language, body, date})
+     const{language, body, date,} = res.data
+    this.setState({language, body, date,})
    })
    .catch(err => {
      console.log(err.response)
@@ -40,6 +42,7 @@ handleSubmit = (e) => {
 }
 
 
+
   render() {
     const { match: {params: {id, } } } = this.props
     const { language, body, date } = this.state
@@ -62,14 +65,17 @@ handleSubmit = (e) => {
         onChange={this.handleChange}
         required
         />
+        
         <Header as="h4">Date:</Header>
         <Form.Input
-        name="date"
-        placeholder="Date..."
-        value={date}
-        onChange={this.handleChange}
-        required
-        />
+         name="date"
+         placeholder="MM/DD/YYYY"
+         value={date}
+         onChange={this.handleChange}
+         required
+         >
+         </Form.Input>
+
         <Button color="green" inverted>Submit</Button>
         <Link to="/topics">
         <Button color="blue" inverted>Back</Button>
