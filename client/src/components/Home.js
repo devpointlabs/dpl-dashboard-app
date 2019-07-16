@@ -1,9 +1,9 @@
 import React from "react"
+import axios from 'axios'
 import Quote from './quotes/RandQuote'
 import Weather from './Weather'
 import YouTube from './youtube/YouTube'
 import CalApp from './calendar/CalApp'
-import axios from 'axios'
 // import styled from 'styled-components'
 import { Header, Grid, Responsive, List, Image} from "semantic-ui-react"
 import Clock from './Clock'
@@ -17,7 +17,6 @@ class Home extends React.Component {
     axios.get('/api/tweets')
     .then( res => {
       let current = res.data[0]
-      debugger
       this.setState({ tweets: [current] }) 
   })
 }
@@ -82,10 +81,10 @@ class Home extends React.Component {
          </Grid.Column>
        </Grid.Row>
 
-       <Grid.Row color="grey" style={{height: '14%'}}>
+       <Grid.Row color="grey" style={{height: '15%'}}>
          <Grid.Column textAlign={'center'} width={16}>
           <Header color="black">
-          {this.currentTweet(this.state.tweets)}
+          {this.currentTweet()}
           </Header>
           </Grid.Column>
       </Grid.Row>

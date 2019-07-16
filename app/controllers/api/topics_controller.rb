@@ -43,6 +43,6 @@ class Api::TopicsController < ApplicationController
   end
 
   def topic_params
-    params.require(:topic).permit(:body, :language)
+    params.require(:topic).permit(:body, :language, :date)
   end
 end
