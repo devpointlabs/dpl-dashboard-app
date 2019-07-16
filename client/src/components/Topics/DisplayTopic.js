@@ -8,22 +8,42 @@ class DisplayTopic extends React.Component {
   }
 
   componentDidMount(){
-    axios.get('/api/topic')
+    axios.get('/api/topics')
         .then(res => {
-          this.setState({
-            body: ['body'],
-            language: ['language']
-          })
+          this.setState({ topics: res.data})
+        })
+        .catch( err => {
+          console.log(err.response)
         })
   }
 
-  render() {
-    const { body, language, } = this.state
+  showTopic = () => {
+    const {topics } = this.state
+    if (topics.length <= 0)
+    return <h2>Project Day!</h2>
     return (
-      <>
-        <Header as='h4'>{language}</Header>
-        <Header as='h5'>{body}</Header>
-      </>
+    
+         topics.map( topic => 
+           <>
+              <Header as="h3" style={{textAlign: "center", color: "white"}}>
+               {topic.language}
+              </Header>
+              <Header as="h4"  style={{textAlign: "center", color: "white"}}>
+               {topic.body}
+              </Header>
+              
+             
+            </>
+         )
+    )
+        }
+  
+
+  render() {
+    return (
+     <div>
+      {this.showTopic()}
+      </div>
     )
   }
 }
