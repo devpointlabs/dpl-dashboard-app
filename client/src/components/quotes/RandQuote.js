@@ -30,8 +30,8 @@ class Quote extends React.Component {
     const { text, name, } = this.state
     return (
       <>
-      <Header as="h4">"{text}"</Header>
-      <Header as="h5"> - {name}</Header>
+      <Header as="h4" style={{color: 'white'}}>"{text}"</Header>
+      <Header as="h5" style={{color: 'white'}}> - {name}</Header>
       </>
     )
   }
