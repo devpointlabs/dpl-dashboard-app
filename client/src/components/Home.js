@@ -7,6 +7,7 @@ import CalApp from './calendar/CalApp'
 // import styled from 'styled-components'
 import { Header, Grid, Responsive, List, Image} from "semantic-ui-react"
 import Clock from './Clock'
+import DisplayTopic from './Topics/DisplayTopic'
 
 
 
@@ -62,7 +63,7 @@ class Home extends React.Component {
 
           <Grid.Column width={8} color="grey">
              <Header color="black" inverted>Todays Topic:</Header>
-             add your component here
+              <DisplayTopic />
           </Grid.Column>
 
           <Grid.Column width={4} color="grey">

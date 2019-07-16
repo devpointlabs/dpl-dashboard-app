@@ -77,18 +77,6 @@ state = { topics: [],   }
       </Grid>
     )}
 
-    currentTopic = (id) => {
-      axios.put(`/api/current/${id}`)
-        .then( ({ data }) => {
-          const topics = this.state.topics.map( topic => {
-            if (topic.id === id)
-              return data
-            return topic
-          });
-  
-          this.setState({ topics });
-        });
-    }
   
     
     destroyTopic = (id) => {
