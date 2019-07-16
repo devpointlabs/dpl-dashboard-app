@@ -9,6 +9,7 @@ import CalApp from './calendar/CalApp'
 import { Header, Grid,  } from "semantic-ui-react";
 import Clock from './Clock'
 // import Twitter from './twitter/Twitter'
+import DisplayTopic from './Topics/DisplayTopic';
 
 // I don't really like this function, I would like to Change the 
 // month and day to the words instead of numbers
@@ -44,7 +45,7 @@ const Home = () => (
 
           <Grid.Column width={8} color="grey">
              <Header color="black" inverted>Todays Topic:</Header>
-             add your component here
+              <DisplayTopic />
           </Grid.Column>
 
           <Grid.Column width={4} color="grey">
