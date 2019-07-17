@@ -7,6 +7,7 @@
     "axios-fetch": "^1.1.0",
     "devise-axios": "^1.0.24",
     "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-big-calendar": "^0.22.0",
     "react-dom": "^16.8.6",
@@ -41,5 +42,4 @@
       "last 1 safari version"
     ]
   }
-  
 }

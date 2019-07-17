@@ -14,13 +14,13 @@ import DisplayTopic from './Topics/DisplayTopic'
 class Home extends React.Component {
   state = { tweets: [],}
   
-  componentDidMount() {
-    axios.get('/api/tweets')
-    .then( res => {
-      let current = res.data[0]
-      this.setState({ tweets: [current] }) 
-  })
-}
+//   componentDidMount() {
+//     axios.get('/api/tweets')
+//     .then( res => {
+//       let current = res.data[0]
+//       this.setState({ tweets: [current] }) 
+//   })
+// }
 
   currentTweet = () => (
     <List divided relaxed>
