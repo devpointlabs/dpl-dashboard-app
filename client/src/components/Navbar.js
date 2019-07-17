@@ -97,7 +97,7 @@ class Navbar extends React.Component {
     }
     else 
       return (
-        <button onClick={this.handleToggle}>
+        <button style={{ position: "absolute", zIndex: 999, }} onClick={this.handleToggle}>
         </button>
       )
   }
