@@ -22,48 +22,48 @@ const CurrentDate = () => {
 const Home = () => (
 
 
-  
-  <div style={{overflowX: "hidden"}}>
-    <Grid style={{height: '100vh', width: '100vw', position: "absolute"}} margin="0px">
-     
 
-      <Grid.Row textAlign={'center'} style={{height: '30%'}} display="flex">
-          <Grid.Column width={5} color="black" textAlign={"left"}>
+  <div style={{ overflowX: "hidden" }}>
+    <Grid style={{ height: '100vh', width: '100vw', position: "absolute" }} margin="0px">
+
+
+      <Grid.Row textAlign={'center'} style={{ height: '30%' }} display="flex">
+        <Grid.Column width={5} color="black" textAlign={"left"}>
           <CurrentDate />
-          <hr/>
-          <DisplayTweet/>
-          </Grid.Column>
+          <hr />
+          <DisplayTweet />
+        </Grid.Column>
 
-          <Grid.Column  width={8} color="grey" >
-             <Header style={{ fontSize: "3em",}} color="black" inverted >Todays Topic:</Header>
-              <DisplayTopic  />
-              <hr/>
-              <Quote />
-             
-          </Grid.Column>
+        <Grid.Column width={8} color="grey" >
+          <Header style={{ fontSize: "3em", }} color="black" inverted >Todays Topic:</Header>
+          <DisplayTopic />
+          <hr />
+          <Quote />
 
-         <Grid.Column textAlign={'center'} width={3} color="black">
-          <Clock/>
-          <hr/>
-           <Weather/>
-          </Grid.Column>
-     </Grid.Row>
+        </Grid.Column>
 
-       <Grid.Row style={{height: '70%'}} display="flex">
-          <Grid.Column width={5} color="black">
+        <Grid.Column textAlign={'center'} width={3} color="black">
+          <Clock />
+          <hr />
+          <Weather />
+        </Grid.Column>
+      </Grid.Row>
+
+      {/* <Grid.Row style={{ height: '70%' }} display="flex">
+        <Grid.Column width={5} color="black">
           <CalApp />
-          </Grid.Column>
-         <Grid.Column width={11} color="black">
-  
-         <YouTube />
-         </Grid.Column>
-       </Grid.Row>
+        </Grid.Column>
+        <Grid.Column width={11} color="black">
 
+          <YouTube />
+        </Grid.Column>
+      </Grid.Row> */}
+      {/* <Grid.Row>
       <Grid.Column textAlign={'center'} width={3} color="black">
         <Clock />
         <Weather />
       </Grid.Column>
-    </Grid.Row>
+    </Grid.Row> */}
 
     <Grid.Row style={{ height: '70%' }}>
       <Grid.Column width={5} color="black">
@@ -83,9 +83,9 @@ const Home = () => (
           </Grid.Column>
       </Grid.Row> */}
      </Grid>
-     </div>
+     </div >
 
-
+)
 
 
 export default Home;
