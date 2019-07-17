@@ -2,7 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import { List } from 'semantic-ui-react'
 import moment from 'moment'
-//trying to get moment to parse input and currentDate. 
+
+
 class DisplayTopic extends React.Component {
   state = {
     topics: [],
@@ -37,7 +38,12 @@ class DisplayTopic extends React.Component {
             </List.Item>
           
           ) 
-         }
+          else 
+          return(
+          <h1>Project Day!</h1>
+//write a ternary to display Project Day or Have a good weekend
+       )
+      }
     )
    )
   }
