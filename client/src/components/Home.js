@@ -4,43 +4,28 @@ import Quote from './quotes/RandQuote'
 import Weather from './Weather'
 import YouTube from './youtube/YouTube'
 import CalApp from './calendar/CalApp'
-// import styled from 'styled-components'
-import { Header, Grid, Responsive, List, Image} from "semantic-ui-react"
+import DisplayTweet from './twitter/DisplayTweet'
+import { Header, Grid, Responsive,} from "semantic-ui-react"
 import Clock from './Clock'
 import DisplayTopic from './Topics/DisplayTopic'
 
+const CurrentDate = () => {
+  var tempDate = new Date();
+  var date = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' +  tempDate.getFullYear()
+  const today = date;
+  return (
+   <Responsive as="h2">{today}</Responsive>
+  );
+}
 
+const Home = () => (
 
-class Home extends React.Component {
-  state = { tweets: [],}
   
-//   componentDidMount() {
-//     axios.get('/api/tweets')
-//     .then( res => {
-//       let current = res.data[0]
-//       this.setState({ tweets: [current] }) 
-//   })
-// }
+  
 
-  currentTweet = () => (
-    <List divided relaxed>
-      { this.state.tweets.map( tweet =>
-        <List.Item key={tweet.id}>
-          <Image avatar src={tweet.user.profile_image_url} />
-          <List.Content>
-            <List.Header>{tweet.user.name}</List.Header>
-            <List.Content>{tweet.text}</List.Content>
-            <List.Description>
-              <a href={tweet.user.url} target="_blank" rel="noopener noreferrer" >@{tweet.user.screen_name}</a>
-            </List.Description>
-          </List.Content>
-        </List.Item>
-      )}
-    </List>
-  )
   
- 
   
+<<<<<<< HEAD
   render() {
     return (
 
@@ -55,25 +40,33 @@ class Home extends React.Component {
              <Clock />
           </Grid.Column>
       </Grid.Row> 
+=======
+    <Grid divided style={{height: '90vh', width: '100vw',}} margin="0px">
+     
+>>>>>>> d3842bc2af45ecfff07871f7c36efc7525086b88
 
       <Grid.Row textAlign={'center'} width={8} style={{height: '30%'}} display="flex">
-          <Grid.Column width={4} color="grey" >
-          <Header color="black" inverted>Quote of Day:</Header>
-          <Quote />
+          <Grid.Column width={5} color="black" textAlign={"left"}>
+          <CurrentDate />
+          <hr/>
+          <DisplayTweet/>
           </Grid.Column>
 
-          <Grid.Column textAlign={'center'} width={8} color="grey">
-             <Header color="black" inverted>Todays Topic:</Header>
-              <DisplayTopic />
+          <Grid.Column  width={8} color="grey" >
+             <Header style={{ fontSize: "3em",}} color="black" inverted >Todays Topic:</Header>
+              <DisplayTopic style={{verticalAlign: 'middle'}} />
+              <hr/>
+              <Quote />
+             
           </Grid.Column>
 
-        <Grid.Column textAlign={'center'} width={4} color="grey">
-          <Header color="black" inverted>Weather</Header>
+         <Grid.Column textAlign={'center'} width={3} color="black">
+          <Clock/>
            <Weather/>
           </Grid.Column>
-        </Grid.Row>
+     </Grid.Row>
 
-       <Grid.Row style={{height: '60%'}}>
+       <Grid.Row style={{height: '70%'}}>
           <Grid.Column width={5} color="black">
           <CalApp />
           </Grid.Column>
@@ -83,31 +76,19 @@ class Home extends React.Component {
          </Grid.Column>
        </Grid.Row>
 
-       <Grid.Row color="grey" style={{height: '15%'}}>
+       {/* <Grid.Row color="grey" style={{height: '11%'}}>
          <Grid.Column textAlign={'center'} width={16}>
           <Header color="black">
-          {/* {this.currentTweet()} */}
+          <DisplayTweet/>
           </Header>
           </Grid.Column>
-      </Grid.Row>
+      </Grid.Row> */}
      </Grid>
- </>
-    )
-  }
-  }
 
- // Playing with the Responsive tag.Not sure how it will look on the big screen
+    )
   
-  // I don't really like this function, I would like to Change the 
-  // month and day to the words instead of numbers
-  // if any one would like to or has a better way or idea, go with it. This is a temp solution
-  function CurrentDate() {
-    var tempDate = new Date();
-    var date = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' +  tempDate.getFullYear()
-    const today = "Today's date:  "+date;
-    return (
-     <Responsive as="h2">{today}</Responsive>
-    );
-  }
+  
+
+
 
 export default Home;

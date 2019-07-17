@@ -19,14 +19,13 @@ class DisplayTopic extends React.Component {
   }
 
   showTopic = () => {
-    var tempDate = new Date();
-    var currentdate = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' +  tempDate.getFullYear()
+    var currentDate = moment().format("YYYY-MM-DD")
     const {topics } = this.state
 
     return (
     
          topics.map( topic => {
-          if (topic.date === currentdate)
+          if (topic.date === currentDate)
           return(
            <List.Item key={topic.id}>
               <List.Header as="h3" style={{textAlign: "center", color: "white"}}>
