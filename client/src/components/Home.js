@@ -55,19 +55,19 @@ class Home extends React.Component {
           </Grid.Column>
       </Grid.Row> 
 
-        <Grid.Row width={8} style={{height: '30%'}} display="flex">
+      <Grid.Row textAlign={'center'} width={8} style={{height: '30%'}} display="flex">
           <Grid.Column width={4} color="grey" >
           <Header color="black" inverted>Quote of Day:</Header>
           <Quote />
           </Grid.Column>
 
-          <Grid.Column width={8} color="grey">
+          <Grid.Column textAlign={'center'} width={8} color="grey">
              <Header color="black" inverted>Todays Topic:</Header>
               <DisplayTopic />
           </Grid.Column>
 
-          <Grid.Column width={4} color="grey">
-            <Header color="black" inverted>Weather</Header>
+        <Grid.Column textAlign={'center'} width={4} color="grey">
+          <Header color="black" inverted>Weather</Header>
            <Weather/>
           </Grid.Column>
         </Grid.Row>

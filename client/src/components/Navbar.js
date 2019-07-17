@@ -74,6 +74,7 @@ class Navbar extends React.Component {
               id="Youtube"
               active={this.props.location.pathname === "/youtube"}
             />
+<<<<<<< HEAD
           </Link> */}
           <Link to="/Calendar">
             <Menu.Item
@@ -81,6 +82,8 @@ class Navbar extends React.Component {
               id="Calendar"
               active={this.props.location.pathname === "/calendar"}
             />
+=======
+>>>>>>> 01a9965d9a6c69af53bb9784c56a137f3bf3daf9
           </Link>
           <Link to="/quotes">
             <Menu.Item
