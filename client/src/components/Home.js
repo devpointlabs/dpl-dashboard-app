@@ -45,8 +45,9 @@ class Home extends React.Component {
     return (
 
   <> 
+  
     <Grid celled style={{height: '100vh', width: '100vw',}} >
-       <Grid.Row color="black" style={{height: '6%'}}>
+       <Grid.Row color="black" style={{height: '8%'}}>
          <Grid.Column width={8}>
            <CurrentDate />
             </Grid.Column>
