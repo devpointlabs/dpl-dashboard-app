@@ -8,6 +8,8 @@ import DisplayTweet from './twitter/DisplayTweet'
 import { Header, Grid, Responsive,} from "semantic-ui-react"
 import Clock from './Clock'
 import DisplayTopic from './Topics/DisplayTopic'
+import '../index.css'
+
 
 const CurrentDate = () => {
   var tempDate = new Date();
@@ -25,7 +27,7 @@ const Home = () => (
 
   
   
-    <Grid divided style={{height: '90vh', width: '100vw',}} margin="0px">
+    <Grid divided style={{height: '97vh', width: '100vw',}} margin="0px">
      
 
       <Grid.Row textAlign={'center'} width={8} style={{height: '30%'}} display="flex">
@@ -37,7 +39,7 @@ const Home = () => (
 
           <Grid.Column  width={8} color="grey" >
              <Header style={{ fontSize: "3em",}} color="black" inverted >Todays Topic:</Header>
-              <DisplayTopic style={{verticalAlign: 'middle'}} />
+              <DisplayTopic  />
               <hr/>
               <Quote />
              
@@ -45,11 +47,12 @@ const Home = () => (
 
          <Grid.Column textAlign={'center'} width={3} color="black">
           <Clock/>
+          <hr/>
            <Weather/>
           </Grid.Column>
      </Grid.Row>
 
-       <Grid.Row style={{height: '70%'}}>
+       <Grid.Row style={{height: '75%'}}>
           <Grid.Column width={5} color="black">
           <CalApp />
           </Grid.Column>
