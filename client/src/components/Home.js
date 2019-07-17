@@ -1,5 +1,4 @@
 import React from "react"
-import axios from 'axios'
 import Quote from './quotes/RandQuote'
 import Weather from './Weather'
 import YouTube from './youtube/YouTube'
@@ -8,7 +7,7 @@ import DisplayTweet from './twitter/DisplayTweet'
 import { Header, Grid, Responsive,} from "semantic-ui-react"
 import Clock from './Clock'
 import DisplayTopic from './Topics/DisplayTopic'
-import '../index.css'
+
 
 
 const CurrentDate = () => {
@@ -26,11 +25,11 @@ const Home = () => (
   
 
   
-  
-    <Grid divided style={{height: '97vh', width: '100vw',}} margin="0px">
+  <div style={{overflowX: "hidden"}}>
+    <Grid style={{height: '100vh', width: '100vw', position: "absolute"}} margin="0px">
      
 
-      <Grid.Row textAlign={'center'} width={8} style={{height: '30%'}} display="flex">
+      <Grid.Row textAlign={'center'} style={{height: '30%'}} display="flex">
           <Grid.Column width={5} color="black" textAlign={"left"}>
           <CurrentDate />
           <hr/>
@@ -52,7 +51,7 @@ const Home = () => (
           </Grid.Column>
      </Grid.Row>
 
-       <Grid.Row style={{height: '75%'}}>
+       <Grid.Row style={{height: '70%'}} display="flex">
           <Grid.Column width={5} color="black">
           <CalApp />
           </Grid.Column>
@@ -70,6 +69,7 @@ const Home = () => (
           </Grid.Column>
       </Grid.Row> */}
      </Grid>
+     </div>
 
     )
   
