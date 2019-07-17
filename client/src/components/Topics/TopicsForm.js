@@ -69,7 +69,7 @@ handleSubmit = (e) => {
         <Header as="h4">Date:</Header>
         <Form.Input
          name="date"
-         placeholder="M/DD/YYYY"
+         type="date"
          value={date}
          onChange={this.handleChange}
          required
