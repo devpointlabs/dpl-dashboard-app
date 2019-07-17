@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios'
-import { Header, } from 'semantic-ui-react'
-
-
+import { List } from 'semantic-ui-react'
+import moment from 'moment'
+//trying to get moment to parse input and currentDate. 
 class DisplayTopic extends React.Component {
   state = {
     topics: [],
@@ -19,29 +19,32 @@ class DisplayTopic extends React.Component {
   }
 
   showTopic = () => {
-    const { topics } = this.state
-    if (topics.length <= 0)
-      return <h2>Project Day!</h2>
+    var tempDate = new Date();
+    var currentdate = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' +  tempDate.getFullYear()
+    const {topics } = this.state
+
     return (
-
-      topics.map(topic =>
-        <>
-          <Header as="h3" style={{ textAlign: "center", color: "white" }}>
-            {topic.language}
-          </Header>
-          <Header as="h4" style={{ textAlign: "center", color: "white" }}>
-            {topic.body}
-          </Header>
-        </>
-
-
-      )
+    
+         topics.map( topic => {
+          if (topic.date === currentdate)
+          return(
+           <List.Item key={topic.id}>
+              <List.Header as="h3" style={{textAlign: "center", color: "white"}}>
+               {topic.language}
+              </List.Header>
+              <List.Content as="h3"  style={{textAlign: "center", color: "white"}}>
+               {topic.body}
+              </List.Content>
+            </List.Item>
+          
+          ) 
+         }
     )
+   )
   }
-
-
-
-
+       
+  
+  
   render() {
     return (
       <div>
