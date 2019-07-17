@@ -1,5 +1,4 @@
 import React from "react"
-import axios from 'axios'
 import Quote from './quotes/RandQuote'
 import Weather from './Weather'
 import YouTube from './youtube/YouTube'
