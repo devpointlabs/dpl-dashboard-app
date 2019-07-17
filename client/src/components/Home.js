@@ -22,7 +22,11 @@ class Home extends React.Component {
 //   })
 // }
 
-  currentTweet = () => (
+  currentTweet = () => {
+    const {tweets} = this.state
+    if (tweets.length <= 0 )
+    return <h2>No Current Tweets</h2>
+    return (
     <List divided relaxed>
       { this.state.tweets.map( tweet =>
         <List.Item key={tweet.id}>
@@ -37,7 +41,8 @@ class Home extends React.Component {
         </List.Item>
       )}
     </List>
-  )
+    )
+  }
   
  
   
