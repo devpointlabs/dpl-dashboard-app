@@ -16,7 +16,7 @@ class Weather extends React.Component {
 };
 
   fetchWeather = () => {
-        fetch('http://api.openweathermap.org/data/2.5/weather?zip=84101,us&?units=imperial&APPID=562dea345b9be724579a871c814338dd')
+        fetch('http://api.openweathermap.org/data/2.5/weather?zip=84101,us&units=imperial&APPID=562dea345b9be724579a871c814338dd')
         .then(function(response) {
           return response.json();
         })
@@ -29,6 +29,7 @@ class Weather extends React.Component {
       renderWeather = () => {
         return this.state.weather.map( w => 
         <ul key="w.id">
+        <h1>
           <li>Location: {w.name}</li>
           <li>High: {w.main.temp_max}℉</li>
           <li>Low: {w.main.temp_min}℉</li>
@@ -36,13 +37,17 @@ class Weather extends React.Component {
           <li>Humidity: {w.main.humidity}%</li>
           <li>Sky: {w.clouds.all}</li>
           <li>TimeZone: {w.timezone}</li>
-        </ul>)
+        </h1>
+        </ul>
+        )
       }
 
    render() {
     return (
       <Container style={{ padding: "30px 0", }}>
         {this.renderWeather()}
+
+        
       </Container>
     );
   }
