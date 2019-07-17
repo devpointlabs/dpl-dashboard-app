@@ -5,89 +5,68 @@ import Weather from './Weather'
 import YouTube from './youtube/YouTube'
 import CalApp from './calendar/CalApp'
 import DisplayTweet from './twitter/DisplayTweet'
-import { Header, Grid, Responsive,} from "semantic-ui-react"
+import { Header, Grid, Responsive, } from "semantic-ui-react"
 import Clock from './Clock'
 import DisplayTopic from './Topics/DisplayTopic'
 
 const CurrentDate = () => {
   var tempDate = new Date();
-  var date = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' +  tempDate.getFullYear()
+  var date = (tempDate.getMonth() + 1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear()
   const today = date;
   return (
-   <Responsive as="h2">{today}</Responsive>
+    <Responsive as="h2">{today}</Responsive>
   );
 }
 
 const Home = () => (
 
-  
-  
 
-  
-  
-<<<<<<< HEAD
-  render() {
-    return (
+  <Grid divided style={{ height: '90vh', width: '100vw', }} margin="0px">
 
-  <> 
-  
-    <Grid celled style={{height: '100vh', width: '100vw',}} >
-       <Grid.Row color="black" style={{height: '8%'}}>
-         <Grid.Column width={8}>
-           <CurrentDate />
-            </Grid.Column>
-            <Grid.Column textAlign={'right'} width={8}>
-             <Clock />
-          </Grid.Column>
-      </Grid.Row> 
-=======
-    <Grid divided style={{height: '90vh', width: '100vw',}} margin="0px">
-     
->>>>>>> d3842bc2af45ecfff07871f7c36efc7525086b88
 
-      <Grid.Row textAlign={'center'} width={8} style={{height: '30%'}} display="flex">
-          <Grid.Column width={5} color="black" textAlign={"left"}>
-          <CurrentDate />
-          <hr/>
-          <DisplayTweet/>
-          </Grid.Column>
+    <Grid.Row textAlign={'center'} width={8} style={{ height: '30%' }} display="flex">
+      <Grid.Column width={5} color="black" textAlign={"left"}>
+        <CurrentDate />
+        <hr />
+        <DisplayTweet />
+      </Grid.Column>
 
-          <Grid.Column  width={8} color="grey" >
-             <Header style={{ fontSize: "3em",}} color="black" inverted >Todays Topic:</Header>
-              <DisplayTopic style={{verticalAlign: 'middle'}} />
-              <hr/>
-              <Quote />
-             
-          </Grid.Column>
+      <Grid.Column width={8} color="grey" >
+        <Header style={{ fontSize: "3em", }} color="black" inverted >Todays Topic:</Header>
+        <DisplayTopic style={{ verticalAlign: 'middle' }} />
+        <hr />
+        <Quote />
 
-         <Grid.Column textAlign={'center'} width={3} color="black">
-          <Clock/>
-           <Weather/>
-          </Grid.Column>
-     </Grid.Row>
+      </Grid.Column>
 
-       <Grid.Row style={{height: '70%'}}>
-          <Grid.Column width={5} color="black">
-          <CalApp />
-          </Grid.Column>
-         <Grid.Column width={11} color="black">
-  
-         <YouTube />
-         </Grid.Column>
-       </Grid.Row>
+      <Grid.Column textAlign={'center'} width={3} color="black">
+        <Clock />
+        <Weather />
+      </Grid.Column>
+    </Grid.Row>
 
-       {/* <Grid.Row color="grey" style={{height: '11%'}}>
+    <Grid.Row style={{ height: '70%' }}>
+      <Grid.Column width={5} color="black">
+        <CalApp />
+      </Grid.Column>
+      <Grid.Column width={11} color="black">
+
+        <YouTube />
+      </Grid.Column>
+    </Grid.Row>
+
+    {/* <Grid.Row color="grey" style={{height: '11%'}}>
          <Grid.Column textAlign={'center'} width={16}>
           <Header color="black">
           <DisplayTweet/>
           </Header>
           </Grid.Column>
       </Grid.Row> */}
-     </Grid>
+  </Grid>
 
-    )
-  
-  
+)
+
+
 
 
 

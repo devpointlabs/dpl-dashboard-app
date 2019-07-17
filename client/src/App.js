@@ -42,7 +42,7 @@ const App = () => (
           <Route exact path="/topics/new" component={TopicsForm} />
           {/* <Route exact path="/topics/:id/dailytopics" component={Topics} /> */}
           <Route exact path="/topics/:id/edit" component={TopicsForm} />
-          <Route exact path="/topics/:id/edit" render={props => <TopicsForm edti {...props} /> } />
+          <Route exact path="/topics/:id/edit" render={props => <TopicsForm edit {...props} /> } />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route component={NoMatch} />
