@@ -58,7 +58,7 @@ class Navbar extends React.Component {
     return (
       <div >
         <Menu pointing secondary>
-        <button onClick={this.handleToggle}>
+        <button style={{ padding: '20px 20px', cursor: 'pointer'}} onClick={this.handleToggle}>
           Toggle Navbar
         </button>
           <Link to="/">
@@ -97,7 +97,9 @@ class Navbar extends React.Component {
     }
     else 
       return (
-        <button style={{ position: "absolute", zIndex: 1,  opacity: "0.0", cursor: 'pointer' }} onClick={this.handleToggle}>
+
+        <button style={{ position: "absolute", zIndex: 5, yIndex: 5,  opacity: "0.0", cursor: 'pointer', padding: '20px 20px' }} onClick={this.handleToggle}>
+
         </button>
       )
   }

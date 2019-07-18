@@ -9,14 +9,14 @@ class DisplayTopic extends React.Component {
     topics: [],
   }
 
-  componentDidMount(){
+  componentDidMount() {
     axios.get('/api/topics')
-        .then(res => {
-          this.setState({ topics: res.data})
-        })
-        .catch( err => {
-          console.log(err.response)
-        })
+      .then(res => {
+        this.setState({ topics: res.data })
+      })
+      .catch(err => {
+        console.log(err.response)
+      })
   }
 
   showTopic = () => {
@@ -52,8 +52,8 @@ class DisplayTopic extends React.Component {
   
   render() {
     return (
-     <div>
-      {this.showTopic()}
+      <div>
+        {this.showTopic()}
       </div>
     )
   }
