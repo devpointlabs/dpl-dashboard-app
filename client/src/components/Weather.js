@@ -31,6 +31,7 @@ class Weather extends React.Component {
       renderWeather = () => {
         return this.state.weather.map( w => 
         <ul key="w.id">
+        <h1>
           <li>Location: {w.name}</li>
           <li>High: {w.main.temp_max}℉</li>
           <li>Low: {w.main.temp_min}℉</li>
@@ -38,13 +39,17 @@ class Weather extends React.Component {
           <li>Humidity: {w.main.humidity}%</li>
           <li>Sky: {w.clouds.all}</li>
           <li>TimeZone: {w.timezone}</li>
-        </ul>)
+        </h1>
+        </ul>
+        )
       }
 
    render() {
     return (
       <Container>
         {this.renderWeather()}
+
+        
       </Container>
     );
   }

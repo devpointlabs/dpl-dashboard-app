@@ -8,6 +8,13 @@ import CalApp from "./components/calendar/CalApp";
 // import Register from "./components/Register";
 import Register from "./components/auth/Register";
 import { Switch, Route } from "react-router-dom";
+
+import { Container } from "semantic-ui-react";
+import FetchUser from "./components/FetchUser";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Weather from "./components/Weather";
+import Weatherwidget from "./components/Weatherwidget";
+
 import FetchUser from "./components/auth/FetchUser";
 import QuoteShow from "./components/quotes/AllQuotes"
 import QuoteForm from './components/quotes/QuoteForm'
@@ -19,6 +26,7 @@ import TopicsForm from './components/Topics/TopicsForm';
 // import ProtectedRoute from "./components/ProtectedRoute";
 
 
+
 const App = () => (
 
   <>
@@ -26,6 +34,7 @@ const App = () => (
     <FetchUser>
       
         <Switch>
+
           
           <Route exact path="/" component={Home} />
           <Route exact path="/youtube" component={YTApp} />
@@ -49,7 +58,11 @@ const App = () => (
       
     </FetchUser>
 
+
+
+
   </>
+
 
 );
 
