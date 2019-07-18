@@ -5,6 +5,7 @@ class Weather extends React.Component {
   state = { weather: [], };
 
   componentDidMount() {
+
      this.doTheWeatherStuff()
   };
   
@@ -26,6 +27,7 @@ class Weather extends React.Component {
         });
       }
 
+
       renderWeather = () => {
         return this.state.weather.map( w => 
         <ul key="w.id">
@@ -44,7 +46,7 @@ class Weather extends React.Component {
 
    render() {
     return (
-      <Container style={{ padding: "30px 0", }}>
+      <Container>
         {this.renderWeather()}
 
         
@@ -52,6 +54,7 @@ class Weather extends React.Component {
     );
   }
 }
+
 
 
 export default Weather; 

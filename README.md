@@ -1,24 +1,20 @@
-# README
+# DPL-DASHBOARD
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*Created with ❤️ by Mike, Michael, Chris, Peter, and Nelson* /
+*Ruby version 2.3.1* /
+*Needs Yarn npm package* /
+*Most customization must be manually done within Client directory* /
 
-Things you may want to cover:
+Steps:
 
-* Ruby version
+git clone (repo url)
 
-* System dependencies
+bunde install
 
-* Configuration
+rails db:create db:migrate db:seed
 
-* Database creation
+rails s -p 3001
 
-* Database initialization
+*in new terminal window* yarn
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+yarn start
