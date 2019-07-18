@@ -10,31 +10,37 @@ class Weatherwidget extends React.Component {
       const script = document.createElement("script");
       script.type = "text/javascript";
 
-      <script> window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push(
-        {
-        id: 15,
-        cityid: '5780993',
-        appid: '562dea345b9be724579a871c814338dd',
-        units: 'imperial',
-        containerid: 'openweathermap-widget-15',  });  
-        (function() {
-        var script = document.createElement('script');
-        script.async = true;
-        script.charset = "utf-8";
-        script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
-        var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  
-        })();
-    </script>
-
       document.body.appendChild(script);
   }
 
+  widgetFunc = () => {
+   return (
+    <div>
+
+        {/* width should be 470px */}
+      
+<a className="weatherwidget-io" 
+href="https://forecast7.com/en/40d76n111d89/salt-lake-city/?unit=us"
+data-label_1="SALT LAKE CITY" 
+data-label_2="WEATHER" 
+data-icons="Climacons Animated"
+data-theme="weather_one" >SALT LAKE CITY WEATHER</a>
+<script>
+{!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+if(!d.getElementById(id)){js=d.createElement(s);
+    js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+    fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js')}
+</script>
+    </div>
+   )}
+
   render() {
     return (
-        <div id="openweathermap-widget-15"></div>
+        <div>
+        {this.widgetFunc()}
+        </div>
     );
    }
-}
+  }
 
 export default Weatherwidget;
-
