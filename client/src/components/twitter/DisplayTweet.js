@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import {List, Image} from 'semantic-ui-react'
+import {Image, Card, } from 'semantic-ui-react'
 
 
 class DisplayTweet extends React.Component {
@@ -22,23 +22,27 @@ state = { tweets: [],}
     if (tweets.length <= 0 )
     return <h2>No Current Tweets</h2>
     return (
-    <List divided relaxed>
+   
+      <Card.Group divided relaxed>
       { this.state.tweets.map( tweet =>
-        <List.Item key={tweet.id}>
-          <Image avatar src={tweet.user.profile_image_url} />
-          <List.Content>
-            <List.Header>{tweet.user.name}</List.Header>
-            <List.Content>{tweet.text}</List.Content>
-            <List.Description>
-              <a href={tweet.user.url} target="_blank" rel="noopener noreferrer" >@{tweet.user.screen_name}</a>
-            </List.Description>
-          </List.Content>
-        </List.Item>
-      )}
-    </List>
+      <Card>
+      <Card.Content>
+        <Image floated='right' size='mini' avatar src={tweet.user.profile_image_url} />
+        <Card.Header>{tweet.user.name}</Card.Header>
+        <Card.Meta> <a href={tweet.user.url} target="_blank" rel="noopener noreferrer" >@{tweet.user.screen_name}</a></Card.Meta>
+        <Card.Description>
+        {tweet.text}
+        </Card.Description>
+       </Card.Content>
+       </Card>
+       )
+       }
+     </Card.Group>
+  
     )
   }
-
+    
+   
   
   render(){
     return (

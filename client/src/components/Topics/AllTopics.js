@@ -2,7 +2,7 @@ import React from "react"
 import axios from 'axios'
 import {Link, } from "react-router-dom"
 import {Card, Grid, Button, Icon, Container, } from "semantic-ui-react"
-
+import '../../App.css'
 
 class AllTopics extends React.Component {
 state = { topics: [],   }

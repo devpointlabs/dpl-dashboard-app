@@ -28,9 +28,9 @@ state = { quotes: [],   }
        <Grid.Column>
         <Card.Group itemsPerRow={4}>
          { quotes.map( quote => 
-           <Card key={quote.id}>
+           <Card key={quote.id} >
             <Card.Content>
-              <Card.Header>
+              <Card.Header className= "App-header">
                {quote.body}
               </Card.Header>
               <Card.Meta>
