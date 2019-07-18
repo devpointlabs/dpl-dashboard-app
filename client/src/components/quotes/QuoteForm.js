@@ -4,7 +4,7 @@ import axios from 'axios';
 import {Link, } from 'react-router-dom'
 
 class QuoteForm extends React.Component {
-state = { body: '', author: '', category: '', }
+state = { body: '', author: '', }
 
  componentDidMount() {
    const { match: {params: {id, } } } = this.props
@@ -12,8 +12,8 @@ state = { body: '', author: '', category: '', }
    if (id)
    axios.get(`/api/quotes/${id}`)
    .then(res => {
-     const{body, author, category} = res.data
-    this.setState({body, author, category, })
+     const{body, author,} = res.data
+    this.setState({body, author, })
    })
    .catch(err => {
      console.log(err.response)
@@ -41,7 +41,7 @@ handleSubmit = (e) => {
 
   render() {
     const { match: {params: {id, } } } = this.props
-    const { body, author, category, } = this.state
+    const { body, author,  } = this.state
     return (
       <Container style={{marginTop: "100px"}}>
       <Header> {id ? 'Edit' : 'Add'} Quote </Header>
@@ -62,14 +62,7 @@ handleSubmit = (e) => {
         onChange={this.handleChange}
         required
         />
-        <Header as="h4">Category:</Header>
-        <Form.Input
-        name="category"
-        placeholder="Category..."
-        value={category}
-        onChange={this.handleChange}
-        required
-        />
+      
         <Button color="green" inverted>Submit</Button>
         <Link to="/quotes">
         <Button color="blue" inverted>Back</Button>

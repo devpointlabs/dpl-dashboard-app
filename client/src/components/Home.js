@@ -7,13 +7,14 @@ import DisplayTweet from './twitter/DisplayTweet'
 import { Header, Grid, Responsive, } from "semantic-ui-react"
 import Clock from './Clock'
 import DisplayTopic from './Topics/DisplayTopic'
+import '../App.css'
 
 const CurrentDate = () => {
   var tempDate = new Date();
   var date = (tempDate.getMonth() + 1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear()
   const today = date;
   return (
-    <Responsive as="h2">{today}</Responsive>
+   <div className= "App-header">{today}</div>
   );
 }
 
@@ -29,6 +30,7 @@ class Home extends React.Component {
       showInsta: !state.showInsta
     }))
   }
+
 
   render() {
     if (this.state.showInsta) {
@@ -117,6 +119,7 @@ class Home extends React.Component {
     }
   }
 }
+
 
 
 
