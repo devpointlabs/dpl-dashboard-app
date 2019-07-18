@@ -4,8 +4,9 @@ import Weather from './Weather'
 import YouTube from './youtube/YouTube'
 import CalApp from './calendar/CalApp'
 import DisplayTweet from './twitter/DisplayTweet'
-import { Header, Grid, Responsive, } from "semantic-ui-react"
+import { Header, Grid, } from "semantic-ui-react"
 import Clock from './Clock'
+import Instagram from './instagram/Instagram'
 import DisplayTopic from './Topics/DisplayTopic'
 import '../App.css'
 
@@ -69,7 +70,7 @@ class Home extends React.Component {
                 onClick={this.handleInsta} ></button>
             </Grid.Column>
             <Grid.Column width={11} color="black">
-              <h1>Instagram API will go here</h1>
+              <Instagram/>
             </Grid.Column>
           </Grid.Row>
         </Grid>
