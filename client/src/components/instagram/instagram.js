@@ -20,7 +20,7 @@ componentDidMount() {
 
 render() {
   return (
-    <div>test</div>
+    <div>Test</div>
   )
 }
 
