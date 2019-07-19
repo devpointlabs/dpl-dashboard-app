@@ -45,7 +45,7 @@ class Home extends React.Component {
             <Grid.Column width={5} color="black" textAlign={"left"}>
               <CurrentDate />
               <br/>
-              <DisplayTweet />
+              {/* <DisplayTweet /> */}
             </Grid.Column>
 
             <Grid.Column width={8} color="grey" >
@@ -86,7 +86,7 @@ class Home extends React.Component {
               <Grid.Column width={5} color="black" textAlign={"left"}>
                 <CurrentDate />
                 <br />
-                <DisplayTweet />
+                {/* <DisplayTweet /> */}
               </Grid.Column>
 
               <Grid.Column width={8} color="grey" >
