@@ -30,7 +30,7 @@ state = { quotes: [],   }
          { quotes.map( quote => 
            <Card key={quote.id} >
             <Card.Content>
-              <Card.Header className= "App-header">
+              <Card.Header>
                {quote.body}
               </Card.Header>
               <Card.Meta>

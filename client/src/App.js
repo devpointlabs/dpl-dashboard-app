@@ -8,14 +8,7 @@ import CalApp from "./components/calendar/CalApp";
 // import Register from "./components/Register";
 import Register from "./components/auth/Register";
 import { Switch, Route } from "react-router-dom";
-
-import { Container } from "semantic-ui-react";
-import FetchUser from "./components/FetchUser";
-import ProtectedRoute from "./components/ProtectedRoute";
-import Weather from "./components/Weather";
-import Weatherwidget from "./components/Weatherwidget";
-
-import FetchUser from "./components/auth/FetchUser";
+// import FetchUser from "./components/FetchUser";
 import QuoteShow from "./components/quotes/AllQuotes"
 import QuoteForm from './components/quotes/QuoteForm'
 import DailyQuote from './components/quotes/DailyQuote'
@@ -23,7 +16,7 @@ import Twitter from './components/twitter/Twitter'
 import AllTopics from "./components/Topics/AllTopics";
 import TopicsForm from './components/Topics/TopicsForm';
 
-// import ProtectedRoute from "./components/ProtectedRoute";
+
 
 
 
@@ -31,14 +24,13 @@ const App = () => (
 
   <>
     <Navbar/>
-    <FetchUser>
+    
       
         <Switch>
 
           
           <Route exact path="/" component={Home} />
           <Route exact path="/youtube" component={YTApp} />
-          {/* <ProtectedRoute exact path="/calendar" component={CalApp} /> */}
           <Route exact path="/calendar" component={CalApp} />
           <Route exact path="/twitter" component={Twitter} />
           <Route exact path="/quotes" component={QuoteShow} />
@@ -56,7 +48,7 @@ const App = () => (
           <Route component={NoMatch} />
         </Switch>
       
-    </FetchUser>
+  
 
 
 

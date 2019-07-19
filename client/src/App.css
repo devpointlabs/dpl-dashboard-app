@@ -1,38 +1,60 @@
-
-.App {
-  text-align: center;
-}
-
+/* this is a work around or hackey way to fix our grid display problem */
 body {
   background-color: black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
-.App-header {
+/* this is for all headers in the grid cells */
+.Headers {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(1em + 1vw);
+  font-size: calc(1.1em + 1vw);
   color: White;
   font-family: lato;
   padding: 10px;
 }
 
-.App-body {
+.Body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(1em + 1vw);
+  font-size: calc(.88em + 1vw);
   color: White;
   font-family: karla;
-  padding: 20px;
+  padding: 10px;
+}
+.Quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(.22em + 1vw);
+  color: White;
+  font-family: karla;
+  padding: 5px;
+}
+
+.Meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(.10em + 1vw);
+  color: White;
+  font-family: karla;
+  padding: 5px;
+}
+.Space {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: White;
+  font-family: karla;
+  padding: 10px;
 }
 
 @keyframes App-logo-spin {
