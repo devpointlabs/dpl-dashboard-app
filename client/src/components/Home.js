@@ -1,10 +1,10 @@
 import React from "react"
 import Quote from './quotes/RandQuote'
-import Weather from './Weather'
 import YouTube from './youtube/YouTube'
 import CalApp from './calendar/CalApp'
+import Weatherwidget from "./weather/Weatherwidget";
 import DisplayTweet from './twitter/DisplayTweet'
-import { Header, Grid, } from "semantic-ui-react"
+import { Header, Grid, Container, Responsive,  } from "semantic-ui-react"
 import Clock from './Clock'
 import Instagram from './instagram/Instagram'
 import DisplayTopic from './Topics/DisplayTopic'
@@ -15,7 +15,7 @@ const CurrentDate = () => {
   var date = (tempDate.getMonth() + 1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear()
   const today = date;
   return (
-   <div className= "App-header">{today}</div>
+   <div className= "Body">{today}</div>
   );
 }
 
@@ -38,28 +38,28 @@ class Home extends React.Component {
       return (
 
         <div style={{ overflowX: "hidden" }}>
-        <Grid style={{ height: '100vh', width: '100vw', position: "absolute" }} margin="0px">
+        <Responsive as={Grid} divided='vertically' style={{ height: '100vh', width: '100vw', position: "absolute" }} margin="0px">
 
 
-          <Grid.Row textAlign={'center'} style={{ height: '30%' }} display="flex">
+          <Grid.Row textAlign={'center'} style={{ height: '31%' }} display="flex">
             <Grid.Column width={5} color="black" textAlign={"left"}>
               <CurrentDate />
-              <hr />
-              <DisplayTweet />
+              <br/>
+              {/* <DisplayTweet /> */}
             </Grid.Column>
 
             <Grid.Column width={8} color="grey" >
-              <Header style={{ fontSize: "3em", }} color="black" inverted >Todays Topic:</Header>
+              <div className="Headers" style={{textDecoration: "underline"}} >Todays Topic</div>
               <DisplayTopic />
-              <hr />
+              <br />
               <Quote />
 
             </Grid.Column>
 
             <Grid.Column textAlign={'center'} width={3} color="black">
               <Clock />
-              <hr />
-              <Weather />
+              
+              <Weatherwidget />
             </Grid.Column>
           </Grid.Row>
 
@@ -73,34 +73,35 @@ class Home extends React.Component {
               <Instagram/>
             </Grid.Column>
           </Grid.Row>
-        </Grid>
+        </Responsive>
       </div >
       )
     } else {
       return (
         <div style={{ overflowX: "hidden" }}>
-          <Grid style={{ height: '100vh', width: '100vw', position: "absolute" }} margin="0px">
+          <Responsive as={Grid} divided='vertically' style={{ height: '100vh', width: '100vw', position: "absolute" }} margin="0px">
 
 
-            <Grid.Row textAlign={'center'} style={{ height: '30%' }} display="flex">
+            <Grid.Row textAlign={'center'} style={{ height: '31%' }} display="flex">
               <Grid.Column width={5} color="black" textAlign={"left"}>
                 <CurrentDate />
-                <hr />
-                <DisplayTweet />
+                <br />
+                {/* <DisplayTweet /> */}
               </Grid.Column>
 
               <Grid.Column width={8} color="grey" >
-                <Header style={{ fontSize: "3em", }} color="black" inverted >Todays Topic:</Header>
+              <Container>
+              <div className="Headers" style={{textDecoration: "underline"}}  >Todays Topic</div>
                 <DisplayTopic />
-                <hr />
+                <br />
                 <Quote />
-
+                </Container>
               </Grid.Column>
 
               <Grid.Column textAlign={'center'} width={3} color="black">
                 <Clock />
-                <hr />
-                <Weather />
+    
+                <Weatherwidget />
               </Grid.Column>
             </Grid.Row>
 
@@ -114,7 +115,7 @@ class Home extends React.Component {
                 <YouTube />
               </Grid.Column>
             </Grid.Row>
-          </Grid>
+          </Responsive>
         </div >
       )
     }

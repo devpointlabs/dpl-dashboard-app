@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import { List } from 'semantic-ui-react'
 import moment from 'moment'
 
 
@@ -28,14 +27,14 @@ class DisplayTopic extends React.Component {
          topics.map( topic => {
           if (topic.date === currentDate)
           return(
-           <List.Item key={topic.id}>
-              <List.Header as="h3" style={{textAlign: "center", color: "white"}}>
+           <div key={topic.id}>
+              <div className="Body">
                {topic.language}
-              </List.Header>
-              <List.Content as="h3"  style={{textAlign: "center", color: "white"}}>
+              </div>
+              <div className="Meta">
                {topic.body}
-              </List.Content>
-            </List.Item>
+              </div>
+            </div>
           
           ) 
           else 
@@ -52,9 +51,9 @@ class DisplayTopic extends React.Component {
   
   render() {
     return (
-      <div>
+      <>
         {this.showTopic()}
-      </div>
+    </>
     )
   }
 }

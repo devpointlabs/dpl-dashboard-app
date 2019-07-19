@@ -16,7 +16,7 @@ tick = () => this.setState({ date: new Date(), });
 
   render() {
     return (//this extracts the Time from the Date() method
-      <div className= "App-header">{ this.state.date.toLocaleTimeString() }</div>
+      <div className= "Body">{ this.state.date.toLocaleTimeString() }</div>
     )
   }
 }
