@@ -4,6 +4,7 @@ import Quote from './quotes/RandQuote'
 import Weather from './Weather'
 import YouTube from './youtube/YouTube'
 import CalApp from './calendar/CalApp'
+import Events from './calendar/Events'
 // import styled from 'styled-components'
 import { Header, Grid, Responsive, List, Image} from "semantic-ui-react"
 import Clock from './Clock'
@@ -74,7 +75,7 @@ class Home extends React.Component {
 
        <Grid.Row style={{height: '60%'}}>
           <Grid.Column width={5} color="black">
-          <CalApp />
+          <Events />
           </Grid.Column>
          <Grid.Column width={11} color="black">
   

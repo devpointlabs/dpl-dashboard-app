@@ -6,15 +6,16 @@ import getEvents from "./CalEvents";
 
 const localizer = momentLocalizer(moment);
 
-function EventAgenda({ event }) {
+function EventAgendaNew({ event }) {
   return (
     <span>
-      <em style={{ color: "purple" }}>{event.title}</em>
       <p>{event.desc}</p>
+      <h1>
+        <em style={{ color: "white" }}>{event.title}</em>
+      </h1>
     </span>
   );
 }
-
 class CalApp extends React.Component {
   constructor() {
     super();
@@ -29,21 +30,37 @@ class CalApp extends React.Component {
   }
 
   render() {
+    var styles1 = {
+      margin: "0px",
+      width: "250px",
+      height: "600px",
+      backgroundColor: "yellow",
+      display: "inline-block"
+    };
     return (
       // React Components in JSX look like HTML tags
-      <Calendar
-        localizer={localizer}
-        style={{ height: "300px" }}
-        events={this.state.events}
-        defaultView={Views.AGENDA}
-        toolbar={false}
-        components={{
-          event: Event,
-          agenda: {
-            event: EventAgenda
-          }
-        }}
-      />
+      <>
+        <div>
+          <h1 style={{ color: "#7f60ac" }}>
+            <u>Events for the next month</u>
+          </h1>
+        </div>
+        <div>
+          <Calendar
+            localizer={localizer}
+            style={{ styles1 }}
+            events={this.state.events}
+            defaultView={Views.AGENDA}
+            toolbar={false}
+            components={{
+              event: Event,
+              agenda: {
+                event: EventAgendaNew
+              }
+            }}
+          />
+        </div>
+      </>
     );
   }
 }
