@@ -4,7 +4,7 @@ import YouTube from './youtube/YouTube'
 import CalApp from './calendar/CalApp'
 import Weatherwidget from "./weather/Weatherwidget";
 import DisplayTweet from './twitter/DisplayTweet'
-import { Header, Grid, Container, Responsive,  } from "semantic-ui-react"
+import {Grid, Container, Responsive,  } from "semantic-ui-react"
 import Clock from './Clock'
 import Instagram from './instagram/Instagram'
 import DisplayTopic from './Topics/DisplayTopic'
@@ -15,7 +15,7 @@ const CurrentDate = () => {
   var date = (tempDate.getMonth() + 1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear()
   const today = date;
   return (
-   <div className= "Body">{today}</div>
+   <div className= "Headers">{today}</div>
   );
 }
 
@@ -45,7 +45,7 @@ class Home extends React.Component {
             <Grid.Column width={5} color="black" textAlign={"left"}>
               <CurrentDate />
               <br/>
-              {/* <DisplayTweet /> */}
+              <DisplayTweet />
             </Grid.Column>
 
             <Grid.Column width={8} color="grey" >
@@ -86,12 +86,12 @@ class Home extends React.Component {
               <Grid.Column width={5} color="black" textAlign={"left"}>
                 <CurrentDate />
                 <br />
-                {/* <DisplayTweet /> */}
+                <DisplayTweet />
               </Grid.Column>
 
               <Grid.Column width={8} color="grey" >
               <Container>
-              <div className="Headers" style={{textDecoration: "underline"}}  >Todays Topic</div>
+              <div className="Headers" style={{textDecoration: "underline"}}>Todays Topic</div>
                 <DisplayTopic />
                 <br />
                 <Quote />

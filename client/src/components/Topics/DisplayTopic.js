@@ -29,9 +29,9 @@ class DisplayTopic extends React.Component {
           return(
            <div key={topic.id}>
               <div className="Body">
-               {topic.language}
+               ~{topic.language}~
               </div>
-              <div className="Meta">
+              <div className="Quote">
                {topic.body}
               </div>
             </div>
