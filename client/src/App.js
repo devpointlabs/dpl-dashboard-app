@@ -4,8 +4,9 @@ import HomeB from "./components/HomeB";
 import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
 import Login from "./components/auth/Login";
-import YTApp from "./components/youtube/YTApp"
-import CalApp from "./components/calendar/CalApp";
+import YTApp from "./components/youtube/YTApp";
+import Events from "./components/calendar/Events";
+import Instagram from "./components/instagram/Instagram";
 // import Register from "./components/Register";
 import Register from "./components/auth/Register";
 import { Switch, Route } from "react-router-dom";
@@ -16,13 +17,12 @@ import DailyQuote from './components/quotes/DailyQuote'
 import Twitter from './components/twitter/Twitter'
 import AllTopics from "./components/Topics/AllTopics";
 import TopicsForm from './components/Topics/TopicsForm';
-
+import Weatherwidget from "./components/weather/Weatherwidget";
 
 
 
 
 const App = () => (
-
   <>
     <Navbar/>
     
@@ -32,8 +32,10 @@ const App = () => (
           
           <Route exact path="/" component={Home} />
           <Route exact path="/youtube" component={YTApp} />
-          <Route exact path="/calendar" component={CalApp} />
+          <Route exact path="/calendar" component={Events} />
           <Route exact path="/twitter" component={Twitter} />
+          <Route exact path="/weather" component={Weatherwidget} />
+          <Route exact path="/instagram" component={Instagram} />
           <Route exact path="/quotes" component={QuoteShow} />
           <Route exact path="/quotes/new" component={QuoteForm} />
           <Route exact path="/quotes/dailyquote" component={DailyQuote} />
@@ -58,6 +60,5 @@ const App = () => (
 
 
 );
-
 
 export default App;
