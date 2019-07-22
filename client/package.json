@@ -11,6 +11,8 @@
     "react": "^16.8.6",
     "react-big-calendar": "^0.22.0",
     "react-dom": "^16.8.6",
+    "react-pose": "^4.0.8",
+    "react-responsive-embed": "^2.1.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-weather": "^0.1.3",

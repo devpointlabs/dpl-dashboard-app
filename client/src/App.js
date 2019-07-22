@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "./components/Home";
+import HomeB from "./components/HomeB";
 import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
 import Login from "./components/auth/Login";

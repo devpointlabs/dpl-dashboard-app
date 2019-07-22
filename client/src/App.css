@@ -12,8 +12,8 @@ body {
   justify-content: center;
   font-size: calc(1.1em + 1vw);
   color: White;
-  font-family: lato;
-  padding: 10px;
+  font-family: karla;
+  padding: 15px;
 }
 
 .Body {
@@ -23,7 +23,7 @@ body {
   justify-content: center;
   font-size: calc(.88em + 1vw);
   color: White;
-  font-family: karla;
+  font-family: roboto;
   padding: 10px;
 }
 .Quote {
@@ -31,9 +31,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(.22em + 1vw);
+  font-size: calc(.18em + 1vw);
   color: White;
-  font-family: karla;
+  font-family: roboto;
   padding: 5px;
 }
 
@@ -42,9 +42,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(.10em + 1vw);
+  font-size: calc(.08em + 1vw);
   color: White;
-  font-family: karla;
+  font-family: lato;
   padding: 5px;
 }
 .Space {
@@ -53,8 +53,8 @@ body {
   align-items: center;
   justify-content: center;
   color: White;
-  font-family: karla;
   padding: 10px;
+  margin-top: 10px;
 }
 
 @keyframes App-logo-spin {

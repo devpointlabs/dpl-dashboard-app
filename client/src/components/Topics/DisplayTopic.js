@@ -31,7 +31,7 @@ class DisplayTopic extends React.Component {
               <div className="Body">
                {topic.language}
               </div>
-              <div className="Meta">
+              <div className="Quote">
                {topic.body}
               </div>
             </div>
