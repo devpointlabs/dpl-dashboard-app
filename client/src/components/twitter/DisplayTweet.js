@@ -20,12 +20,12 @@ state = { tweets: [],}
   currentTweet = () => {
     const {tweets} = this.state
     if (tweets.length <= 0 )
-    return <h2>No Current Tweets</h2>
+    return <h2 style={{margin: " 0px 0px 0px 40px"}}>No Current Tweets</h2>
     return (
    
-      <Card.Group>
+      <Card.Group style={{margin: " 0px 0px 0px 40px"}}>
       { this.state.tweets.map( tweet =>
-      <Card key="tweet.id" style={{margin: " 0px 0px 0px 40px"}}>
+      <Card key="tweet.id" >
       <Card.Content>
         <Image floated='right' size='mini' avatar src={tweet.user.profile_image_url} />
         <Card.Header>{tweet.user.name}</Card.Header>

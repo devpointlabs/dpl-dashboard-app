@@ -65,8 +65,15 @@ class Home extends React.Component {
           <Grid.Row style={{ height: '70%' }}>
             <Grid.Column width={5} color="black">
               <Events />
-              <button style={{ position: "absolute", zIndex: "1000", left: "150px", opacity: "0.0", cursor: "pointer", padding: "40px 40px" }}
-                onClick={this.handleInsta} ></button>
+              <button style={{ 
+                position: "absolute", 
+                zIndex: "1000", 
+                left: "150px", 
+                opacity: "0.0", 
+                cursor: "pointer", 
+                padding: "40px 40px" 
+              }}
+                onClick={this.handleInsta}></button>
             </Grid.Column>
             <Grid.Column width={11} color="black">
               <Instagram/>
@@ -78,9 +85,12 @@ class Home extends React.Component {
     } else {
       return (
         <div style={{ overflowX: "hidden" }}>
-          <Responsive as={Grid} divided='vertically' style={{ height: '100vh', width: '100vw', position: "absolute" }} margin="0px">
-
-
+          <Responsive 
+          as={Grid} 
+          divided='vertically' 
+          style={{ height: '100vh', width: '100vw', position: "absolute" }} 
+          margin="0px">
+          
             <Grid.Row textAlign={'center'} style={{ height: '31%' }} display="flex">
               <Grid.Column width={5} color="black" textAlign={"left"}>
                 <CurrentDate />
