@@ -12,7 +12,8 @@ body {
   justify-content: center;
   font-size: calc(1.1em + 1vw);
   color: White;
-  font-family: karla;
+  font-family: roboto;
+  font-weight: bold;
   padding: 15px;
 }
 
@@ -33,7 +34,7 @@ body {
   justify-content: center;
   font-size: calc(.18em + 1vw);
   color: White;
-  font-family: roboto;
+  font-family: lato;
   padding: 5px;
 }
 

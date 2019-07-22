@@ -41,11 +41,11 @@ class Home extends React.Component {
         <Responsive as={Grid} divided='vertically' style={{ height: '100vh', width: '100vw', position: "absolute" }} margin="0px">
 
 
-          <Grid.Row textAlign={'center'} style={{ height: '31%' }} display="flex">
-            <Grid.Column width={5} color="black" textAlign={"left"}>
+          <Grid.Row textAlign={'center'} style={{ height: '31%', }} display="flex">
+            <Grid.Column width={5} color="black" style={{textAlign:"center",  justifyContent: "center"}}>
               <CurrentDate />
               <br/>
-              {/* <DisplayTweet /> */}
+              <DisplayTweet />
             </Grid.Column>
 
             <Grid.Column width={8} color="grey" >
@@ -86,7 +86,7 @@ class Home extends React.Component {
               <Grid.Column width={5} color="black" textAlign={"left"}>
                 <CurrentDate />
                 <br />
-                {/* <DisplayTweet /> */}
+                <DisplayTweet />
               </Grid.Column>
 
               <Grid.Column width={8} color="grey" >

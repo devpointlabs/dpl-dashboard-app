@@ -23,9 +23,9 @@ state = { tweets: [],}
     return <h2>No Current Tweets</h2>
     return (
    
-      <Card.Group divided relaxed>
+      <Card.Group>
       { this.state.tweets.map( tweet =>
-      <Card>
+      <Card key="tweet.id" style={{margin: " 0px 0px 0px 40px"}}>
       <Card.Content>
         <Image floated='right' size='mini' avatar src={tweet.user.profile_image_url} />
         <Card.Header>{tweet.user.name}</Card.Header>
