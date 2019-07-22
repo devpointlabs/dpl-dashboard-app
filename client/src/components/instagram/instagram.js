@@ -40,17 +40,17 @@ componentDidMount() {
 render() {
   const {images } = this.state
   // const pictures = images.forEach((image)=>console.log(image.thumbnail.url,image.id))
-
+  //  console.log(this.state.images[0]
   return (
     <Grid>
     <Grid.Row columns={6} style={{padding: "0px"}}>
      
       <Grid.Column style={{ padding: "0px 0px"}}>
         <Image 
-        src={dplmtn}
+        src={this.state.images[0]}
         width="150px"
         height="150px"
-        padding="0px" />
+        padding="0px" 
         />
       </Grid.Column>
   
