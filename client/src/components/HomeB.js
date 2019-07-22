@@ -27,14 +27,14 @@ const Home = () => (
 <Responsive as={Grid} divided='vertically' style={{ height: '100vh', width: '100vw', position: "absolute" }} margin="0px">
 
 
-  <Grid.Row textAlign={'center'} style={{ height: '31%' }} display="flex">
-    <Grid.Column width={5} color="black" textAlign={"left"}>
+
+    <Grid.Column width={3} style={{height: '100%'}} color="black" textAlign={"left"}>
       <CurrentDate />
       <br/>
-      {/* <DisplayTweet /> */}
+      <CalApp />
     </Grid.Column>
 
-    <Grid.Column width={8} color="grey" >
+    {/* <Grid.Column width={8} color="grey" >
       <div className="Headers" style={{textDecoration: "underline"}} >Todays Topic</div>
       <DisplayTopic />
       <br />
@@ -46,19 +46,19 @@ const Home = () => (
       <Clock />
       
       <Weatherwidget />
-    </Grid.Column>
-  </Grid.Row>
+    </Grid.Column> */}
 
-  <Grid.Row style={{ height: '70%' }}>
-    <Grid.Column width={5} color="black">
-      <CalApp />
+
+  
+    <Grid.Column width={3} color="black">
+      
       <button style={{ position: "absolute", zIndex: "1000", left: "150px", opacity: "0.0", cursor: "pointer", padding: "40px 40px" }}
         onClick={<YouTube /> ? <YouTube/> : <Instagram /> } ></button>
     </Grid.Column>
     <Grid.Column width={11} color="black">
       <Instagram/>
     </Grid.Column>
-  </Grid.Row>
+  
 </Responsive>
 </div >
 )
