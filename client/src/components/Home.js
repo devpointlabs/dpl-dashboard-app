@@ -1,12 +1,12 @@
 import React from "react"
 import Quote from './quotes/RandQuote'
 import YouTube from './youtube/YouTube'
-import CalApp from './calendar/CalApp'
+import Events from './calendar/Events'
 import Weatherwidget from "./weather/Weatherwidget";
 import DisplayTweet from './twitter/DisplayTweet'
 import {Grid, Container, Responsive,  } from "semantic-ui-react"
 import Clock from './Clock'
-import Instagram from './instagram/Instagram'
+import Instagram from './instagram/Instagram.js'
 import DisplayTopic from './Topics/DisplayTopic'
 import '../App.css'
 
@@ -18,7 +18,6 @@ const CurrentDate = () => {
    <div className= "Headers">{today}</div>
   );
 }
-
 
 class Home extends React.Component {
 
@@ -65,7 +64,7 @@ class Home extends React.Component {
 
           <Grid.Row style={{ height: '70%' }}>
             <Grid.Column width={5} color="black">
-              <CalApp />
+              <Events />
               <button style={{ position: "absolute", zIndex: "1000", left: "150px", opacity: "0.0", cursor: "pointer", padding: "40px 40px" }}
                 onClick={this.handleInsta} ></button>
             </Grid.Column>
@@ -107,7 +106,7 @@ class Home extends React.Component {
 
             <Grid.Row style={{ height: '70%' }}>
               <Grid.Column width={5} color="black">
-                <CalApp />
+                <Events />
                 <button style={{ position: "absolute", zIndex: "1000", left: "150px", opacity: "0.0", cursor: "pointer", padding: '40px 40px' }}
                   onClick={this.handleInsta} ></button>
               </Grid.Column>
