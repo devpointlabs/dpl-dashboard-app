@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import {Header, } from "semantic-ui-react"
+import '../../App.css'
 
 class Quote extends React.Component {
   state = {
@@ -29,10 +29,10 @@ class Quote extends React.Component {
   render() {
     const { text, name, } = this.state
     return (
-      <>
-      <Header as="h4" style={{color: 'white'}}>"{text}"</Header>
-      <Header as="h5" style={{color: 'white'}}> - {name}</Header>
-      </>
+      <div className="Space">
+      <div className="Quote">"{text}"</div>
+      <div className="Meta"> - {name}</div>
+      </div>
     )
   }
 }

@@ -58,7 +58,7 @@ class Navbar extends React.Component {
     return (
       <div >
         <Menu pointing secondary>
-        <button onClick={this.handleToggle}>
+        <button style={{ padding: '20px 20px', cursor: 'pointer'}} onClick={this.handleToggle}>
           Toggle Navbar
         </button>
           <Link to="/">
@@ -89,6 +89,13 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === "/topics"}
             />
           </Link>
+          <Link to='/youtube'>
+            <Menu.Item 
+              name="Youtube"
+              id="Youtube"
+              active={this.props.location.pathname === "/youtube"}
+            />
+          </Link>
           {this.rightNavItems()}
         </Menu>
       </div>
@@ -96,11 +103,10 @@ class Navbar extends React.Component {
     }
     else 
       return (
-        // <button onClick={this.handleToggle}>
-        // </button>
-        <div>
-          <button style={{ position: "absolute", zIndex: 999 }} onClick={this.handleToggle}></button>
-        </div>
+
+        <button style={{ position: "absolute", zIndex: 5, yIndex: 5,  opacity: "0.0", cursor: 'pointer', padding: '20px 20px' }} onClick={this.handleToggle}>
+
+        </button>
       )
   }
 }

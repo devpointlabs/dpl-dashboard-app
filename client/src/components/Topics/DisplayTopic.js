@@ -1,44 +1,48 @@
 import React from 'react'
 import axios from 'axios'
-import { List } from 'semantic-ui-react'
 import moment from 'moment'
-//trying to get moment to parse input and currentDate. 
+
+
 class DisplayTopic extends React.Component {
   state = {
     topics: [],
   }
 
-  componentDidMount(){
+  componentDidMount() {
     axios.get('/api/topics')
-        .then(res => {
-          this.setState({ topics: res.data})
-        })
-        .catch( err => {
-          console.log(err.response)
-        })
+      .then(res => {
+        this.setState({ topics: res.data })
+      })
+      .catch(err => {
+        console.log(err.response)
+      })
   }
 
   showTopic = () => {
-    var tempDate = new Date();
-    var currentdate = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' +  tempDate.getFullYear()
+    var currentDate = moment().format("YYYY-MM-DD")
     const {topics } = this.state
 
     return (
     
          topics.map( topic => {
-          if (topic.date === currentdate)
+          if (topic.date === currentDate)
           return(
-           <List.Item key={topic.id}>
-              <List.Header as="h3" style={{textAlign: "center", color: "white"}}>
+           <div key={topic.id}>
+              <div className="Body">
                {topic.language}
-              </List.Header>
-              <List.Content as="h3"  style={{textAlign: "center", color: "white"}}>
+              </div>
+              <div className="Quote">
                {topic.body}
-              </List.Content>
-            </List.Item>
+              </div>
+            </div>
           
           ) 
-         }
+          else 
+          return(
+          <h1>Project Day!</h1>
+//write a ternary to display Project Day or Have a good weekend
+       )
+      }
     )
    )
   }
@@ -47,9 +51,9 @@ class DisplayTopic extends React.Component {
   
   render() {
     return (
-     <div>
-      {this.showTopic()}
-      </div>
+      <>
+        {this.showTopic()}
+    </>
     )
   }
 }

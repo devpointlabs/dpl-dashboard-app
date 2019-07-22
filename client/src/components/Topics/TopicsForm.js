@@ -2,11 +2,11 @@ import React from 'react'
 import { Form, Container, Button, Header,  } from 'semantic-ui-react'
 import axios from 'axios';
 import {Link, } from 'react-router-dom'
-import DayPickerInput from 'react-day-picker/DayPickerInput';
-import 'react-day-picker/lib/style.css'
+
+
 
 class TopicsForm extends React.Component {
-state = { language: '', body: '', date: '', selectedDay: '' }
+state = { language: '', body: '', date: '', }
 // change date to array maybe to comapare to current date
 
  componentDidMount() {
@@ -69,7 +69,7 @@ handleSubmit = (e) => {
         <Header as="h4">Date:</Header>
         <Form.Input
          name="date"
-         placeholder="M/DD/YYYY"
+         type="date"
          value={date}
          onChange={this.handleChange}
          required

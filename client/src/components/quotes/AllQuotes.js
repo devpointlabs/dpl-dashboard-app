@@ -28,7 +28,7 @@ state = { quotes: [],   }
        <Grid.Column>
         <Card.Group itemsPerRow={4}>
          { quotes.map( quote => 
-           <Card key={quote.id}>
+           <Card key={quote.id} >
             <Card.Content>
               <Card.Header>
                {quote.body}
@@ -58,14 +58,14 @@ state = { quotes: [],   }
 
           
         {/* <Link to={`/quotes/${quote.id}/dailyquote`}> */}
-          <Button 
+         {/* <Button 
           color="green"
           basic
           onClick={() => this.currentQuote(quote.id)}
           >
           Daily Quote
           </Button>
-          {/* </Link> */}
+           </Link> */}
          
          </Card.Content>
          </Card>
