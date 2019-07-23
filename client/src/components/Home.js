@@ -6,7 +6,7 @@ import Weatherwidget from "./weather/Weatherwidget";
 import DisplayTweet from './twitter/DisplayTweet'
 import {Grid, Container, Responsive,  } from "semantic-ui-react"
 import Clock from './Clock'
-import Instagram from './instagram/Instagram.js'
+import Instagram from './instagram/Instagram'
 import DisplayTopic from './Topics/DisplayTopic'
 import '../App.css'
 
