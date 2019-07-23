@@ -6,12 +6,6 @@ import styled from 'styled-components'
 import posed from 'react-pose'
 
 
-// <Image 
-// src={dplmtn} 
-// width= "150px"
-// height="150px"
-// />
-
 const Photo = posed.div({
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
