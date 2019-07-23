@@ -1,11 +1,5 @@
 import React from "react";
-var x =
-  "<html><scr" +
-  'ipt>HI</scr' +
-  'ipt></html>';
-
-var extractscript = /<script>(.+)<\/script>/gi.exec(x);
-x = x.replace(extractscript[0], "");
+import moment from 'moment'
 
 const Event = props => {
   var style = {
@@ -25,8 +19,8 @@ const Event = props => {
       <p style={style3}>
         <span style={style2}>
           <b style={style}>
-            01
-            {/* <b style={style} dangerouslySetInnerHTML={{ __html: x }} /> */}
+             {moment(props.end).format('MMM D')}
+             {/* {props.start} */}
           </b>
           {props.title}
         </span>
