@@ -1,0 +1,27 @@
+{
+  "name": "dpl-dashboard-app",
+  "version": "1.0.0",
+  "description": "*Created with ❤️ by Mike, Michael, Chris, Peter, and Nelson* / *Ruby version 2.3.1* / *Needs Yarn npm package* / *Most customization must be manually done within Client directory* /",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "cd client && npm install --only=dev && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "npm run build && npm run deploy && echo 'Client Built'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devpointlabs/dpl-dashboard-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devpointlabs/dpl-dashboard-app/issues"
+  },
+  "homepage": "https://github.com/devpointlabs/dpl-dashboard-app#readme"
+}

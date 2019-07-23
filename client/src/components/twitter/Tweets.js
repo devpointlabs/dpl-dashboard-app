@@ -4,7 +4,7 @@ import { Card, Image, } from 'semantic-ui-react';
 const Tweets = ({ tweets }) => (
   <Card.Group itemsPerRow={3}>
     { tweets.map( tweet =>
-    <Card key="tweet.id" >
+    <Card key="tweet.id" color="blue" >
     <Card.Content>
       <Image floated='right' size='mini' avatar src={tweet.user.profile_image_url} />
       <Card.Header>{tweet.user.name}</Card.Header>

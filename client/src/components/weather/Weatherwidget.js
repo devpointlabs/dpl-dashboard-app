@@ -18,7 +18,7 @@ class Weatherwidget extends React.Component {
         {/* width should be 470px */}
 
         <a
-          class="weatherwidget-io"
+          className="weatherwidget-io"
           href="https://forecast7.com/en/40d76n111d89/salt-lake-city/?unit=us"
           data-font="Roboto"
           data-icons="Climacons Animated"

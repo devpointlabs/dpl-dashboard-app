@@ -6,12 +6,6 @@ import styled from 'styled-components'
 import posed from 'react-pose'
 
 
-// <Image 
-// src={dplmtn} 
-// width= "150px"
-// height="150px"
-// />
-
 const Photo = posed.div({
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
@@ -54,7 +48,6 @@ render() {
     <Grid.Row columns={6} style={{padding: "0px", justifyContent: "center"}} >  
     { images.map(image => 
      <Image 
-      itemsPerRow={4}
       className="image"
       data-key={image}
       src={image.images.standard_resolution.url}

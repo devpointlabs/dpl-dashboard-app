@@ -1,6 +1,6 @@
 import React from "react";
-import {Responsive} from "semantic-ui-react"
-// playing with this semantic Responsive tag. We will see how it looks on the big screen
+
+
 class Clock extends React.Component {
 state = { date: new Date(), };
 
