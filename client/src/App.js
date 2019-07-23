@@ -1,12 +1,11 @@
 import React from "react";
 import Home from "./components/Home";
-import HomeB from "./components/HomeB";
 import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
 import Login from "./components/auth/Login";
 import YTApp from "./components/youtube/YTApp";
 import Events from "./components/calendar/Events";
-import Instagram from "./components/instagram/Instagram";
+import Grams from "./components/instagram/Grams";
 // import Register from "./components/Register";
 import Register from "./components/auth/Register";
 import { Switch, Route } from "react-router-dom";
@@ -35,7 +34,7 @@ const App = () => (
           <Route exact path="/calendar" component={Events} />
           <Route exact path="/twitter" component={Twitter} />
           <Route exact path="/weather" component={Weatherwidget} />
-          <Route exact path="/instagram" component={Instagram} />
+          <Route exact path="/instagram" component={Grams} />
           <Route exact path="/quotes" component={QuoteShow} />
           <Route exact path="/quotes/new" component={QuoteForm} />
           <Route exact path="/quotes/dailyquote" component={DailyQuote} />

@@ -7,7 +7,7 @@ import dplmtn from '../../images/DplMtn.jpg'
 
 
 
-class Instagram extends React.Component {
+class Grams extends React.Component {
   state = {
     images: [],
     isVisible: true,
@@ -57,4 +57,4 @@ render() {
   }
 }
 
-export default Instagram
+export default Grams
