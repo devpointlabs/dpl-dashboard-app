@@ -1,6 +1,9 @@
 {
   "name": "dpl-dashboard-app",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.3.0"
+  },
   "description": "*Created with ❤️ by Mike, Michael, Chris, Peter, and Nelson* / *Ruby version 2.3.1* / *Needs Yarn npm package* / *Most customization must be manually done within Client directory* /",
   "main": "index.js",
   "directories": {
