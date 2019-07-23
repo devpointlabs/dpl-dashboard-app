@@ -2,15 +2,10 @@ import React from 'react'
 import axios from 'axios' 
 import { Grid, Image } from 'semantic-ui-react'
 import dplmtn from '../../images/DplMtn.jpg'
-import styled from 'styled-components'
-import posed from 'react-pose'
 
 
-const Photo = posed.div({
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-  
-})
+
+
 
 class Instagram extends React.Component {
   state = {
@@ -30,9 +25,7 @@ class Instagram extends React.Component {
     .catch( err => {
       console.log(err.response)
     }) 
-    setInterval(() => {
-      this.setState({ isVisible: !this.state.isVisible });
-    }, 6000)
+
   }
   
   
@@ -54,7 +47,6 @@ render() {
       key={image.id}
       width="220px"
       height="200px"
-      pose={isVisible ? 'visible' : 'hidden'}
    />
      )}
     </Grid.Row>
