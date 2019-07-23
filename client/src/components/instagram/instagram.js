@@ -60,7 +60,7 @@ render() {
       src={image.images.standard_resolution.url}
       key={image.id}
       width="220px"
-      height="220px"
+      height="200px"
       pose={isVisible ? 'visible' : 'hidden'}
    />
      )}

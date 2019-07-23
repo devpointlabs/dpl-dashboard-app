@@ -1,21 +1,21 @@
 import React from 'react';
-import { List, Image, } from 'semantic-ui-react';
+import { Card, Image, } from 'semantic-ui-react';
 
 const Tweets = ({ tweets }) => (
-  <List divided relaxed>
+  <Card.Group itemsPerRow={3}>
     { tweets.map( tweet =>
-      <List.Item key={tweet.id}>
-        <Image avatar src={tweet.user.profile_image_url} />
-        <List.Content>
-          <List.Header>{tweet.user.name}</List.Header>
-          <List.Content>{tweet.text}</List.Content>
-          <List.Description>
-            <a href={tweet.user.url} target="_blank" rel="noopener noreferrer" >@{tweet.user.screen_name}</a>
-          </List.Description>
-        </List.Content>
-      </List.Item>
+    <Card key="tweet.id" >
+    <Card.Content>
+      <Image floated='right' size='mini' avatar src={tweet.user.profile_image_url} />
+      <Card.Header>{tweet.user.name}</Card.Header>
+      <Card.Meta> <a href={tweet.user.url} target="_blank" rel="noopener noreferrer" >@{tweet.user.screen_name}</a></Card.Meta>
+      <Card.Description>
+      {tweet.text}
+      </Card.Description>
+     </Card.Content>
+     </Card>
     )}
-  </List>
+  </Card.Group>
 )
 
 export default Tweets;
