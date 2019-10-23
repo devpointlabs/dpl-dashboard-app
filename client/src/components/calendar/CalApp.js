@@ -55,7 +55,7 @@ class CalApp extends React.Component {
             components={{
               event: Event,
               agenda: {
-                event: EventAgendaNew
+              event: EventAgendaNew
               }
             }}
           />

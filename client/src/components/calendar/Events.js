@@ -30,7 +30,7 @@ class getEvents extends React.Component {
 
   renderEvents = () => {
     return this.state.events.map(event => {
-      return <Event {...event} />;
+      return <Event key={event.id} {...event} />;
     });
   };
   render() {
